@@ -1,0 +1,53 @@
+{
+  "version": "ECSP-Admissions-G1.2",
+  "date": "2026-11-08",
+  "full_regression": {
+    "total": 154,
+    "passed": 154,
+    "failed": 0,
+    "skipped": 0,
+    "status": "passed",
+    "run_mode": "147 default regression + 7 opt-in live integration tests",
+    "default_suite": {
+      "passed": 147,
+      "skipped": 7,
+      "subtests_passed": 27
+    },
+    "live_integration": {
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "local_planner": {
+    "model": "qwen2.5-coder-3b",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "docker_base_url": "http://host.docker.internal:11434/v1",
+    "timeout_seconds": 30,
+    "plan_consistency_threshold": 1.0
+  },
+  "demo_gold": {
+    "cases": 121,
+    "overall_accuracy": 1.0,
+    "local_model_plans": 59,
+    "dual_planning_triggered": 0,
+    "p50_ms": 97.902,
+    "p95_ms": 11549.098,
+    "p99_ms": 12369.473
+  },
+  "high_risk_probe": {
+    "cases": 8,
+    "local_model_plans": 5,
+    "dual_planning_triggered": 1,
+    "dual_planning_consistent": 0,
+    "answered": 5,
+    "blocked": 3,
+    "p50_ms": 9735.3,
+    "max_ms": 11572.47
+  },
+  "boundaries": [
+    "Same-signature model/rule plans are not counted as independent dual planning.",
+    "High-risk probe is not an accuracy gold set.",
+    "Only one independent dual-plan case was triggered.",
+    "3B model memory is too high for full 2-core 4GB co-deployment."
+  ]
+}

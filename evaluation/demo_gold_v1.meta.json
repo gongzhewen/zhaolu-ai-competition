@@ -1,0 +1,26 @@
+{
+  "version": "demo-gold-v1",
+  "generated_on": "2026-11-07",
+  "data_scope": "local demonstration database zhaolu_v2",
+  "years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "data_profile": {
+    "dim_major": 64,
+    "dim_province": 16,
+    "fact_plan": 5120,
+    "fact_admission_record": 28450,
+    "fact_student_identity": 28450,
+    "fact_enrollment_status": 28450
+  },
+  "case_count": 121,
+  "answer_cases": 115,
+  "boundary_cases": 6,
+  "gold_method": "independent deterministic SQL against the configured demonstration database",
+  "not_a_real_frozen_test_set": true,
+  "contains_student_details": false
+}

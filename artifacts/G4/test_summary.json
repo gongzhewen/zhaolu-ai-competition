@@ -1,0 +1,54 @@
+{
+  "version": "ECSP-Admissions-G1.1",
+  "date": "2026-11-07",
+  "full_regression": {
+    "total": 133,
+    "passed": 133,
+    "failed": 0,
+    "skipped": 0
+  },
+  "resource_limits": {
+    "backend_cpu": 1.0,
+    "mysql_cpu": 0.75,
+    "web_cpu": 0.25,
+    "total_cpu": 2.0,
+    "backend_memory_mib": 1100,
+    "mysql_memory_mib": 1200,
+    "web_memory_mib": 128,
+    "total_memory_mib": 2428
+  },
+  "database_pool": {
+    "pool_size": 8,
+    "max_overflow": 4,
+    "max_connections": 12
+  },
+  "load_tests": {
+    "pre_fix_12c": {
+      "success_rate": 1.0,
+      "throughput_rps": 6.931,
+      "p95_ms": 2296.86
+    },
+    "pre_fix_24c": {
+      "success_rate": 0.9,
+      "throughput_rps": 8.321,
+      "p95_ms": 3872.31
+    },
+    "fixed_12c": {
+      "success_rate": 1.0,
+      "throughput_rps": 7.411,
+      "p95_ms": 1895.97
+    },
+    "fixed_24c": {
+      "success_rate": 1.0,
+      "throughput_rps": 8.322,
+      "p95_ms": 6345.67
+    }
+  },
+  "recommendation": "12-16 concurrent requests for interactive demonstration.",
+  "boundaries": [
+    "CPU/memory quotas approximate but do not fully replicate a target cloud server",
+    "host network latency differs from production",
+    "MiniMind disabled, so this is deterministic-tool capacity, not local-model capacity",
+    "multi-instance deployment requires shared Redis metrics and database capacity planning"
+  ]
+}

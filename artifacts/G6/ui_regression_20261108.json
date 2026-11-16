@@ -1,0 +1,15 @@
+{
+  "browser_interaction_regression": "passed",
+  "boundary": "桌面与手机真实 Edge 浏览器回归均通过；测试使用当前 dist 和真实 FastAPI。",
+  "evaluation_kind": "frontend_static_and_route_smoke",
+  "date": "2026-11-08",
+  "route_http_smoke_total": 19,
+  "page_count": 19,
+  "vite_production_build": "passed",
+  "route_http_smoke_passed": 19,
+  "typescript_typecheck": "passed",
+  "mobile_css_present": true,
+  "browser_desktop_passed": 19,
+  "browser_mobile_passed": 19,
+  "browser_page_errors": 0
+}

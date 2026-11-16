@@ -1,0 +1,17 @@
+{
+  "router_onnx": {
+    "samples": 100,
+    "p50_ms": 3.08,
+    "p95_ms": 3.6,
+    "p99_ms": 3.97,
+    "mean_ms": 3.13
+  },
+  "vector_rag": {
+    "cold_query_ms": 3356.83,
+    "warm_samples": 15,
+    "warm_p50_ms": 0.0,
+    "warm_p95_ms": 27.09,
+    "warm_p99_ms": 29.26,
+    "warm_mean_ms": 6.95
+  }
+}

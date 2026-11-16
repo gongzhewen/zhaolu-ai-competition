@@ -1,0 +1,268 @@
+/* Mobile compatibility */
+html,
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+.app-main,
+.app-content {
+  min-width: 0;
+}
+
+.ant-table-wrapper,
+.ant-table-content {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 900px) {
+  .app-header {
+    height: auto;
+    min-height: 64px;
+    padding: 10px 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .app-header > .ant-space {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .app-header-title {
+    min-width: 0;
+    font-size: 15px;
+  }
+
+  .app-content {
+    padding: 14px 12px 24px;
+  }
+
+  .metric-grid,
+  .chart-grid,
+  .permission-grid,
+  .insight-grid,
+  .student-kpi-grid,
+  .plan-metric-grid,
+  .alias-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .metric-card,
+  .insight-card,
+  .report-form,
+  .report-preview,
+  .chat-panel {
+    padding: 14px;
+  }
+
+  .page-title {
+    font-size: 23px;
+  }
+
+  .page-description {
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+
+  .ant-card-body {
+    padding: 14px;
+  }
+
+  .ant-space {
+    flex-wrap: wrap;
+  }
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .ant-modal {
+    top: 12px !important;
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+    margin: 0 auto !important;
+  }
+
+  .ant-drawer-content-wrapper {
+    width: min(100vw, 360px) !important;
+  }
+
+  .ant-table-wrapper .ant-table {
+    min-width: 720px;
+  }
+
+  .ant-table-wrapper .ant-table-cell {
+    white-space: nowrap;
+  }
+
+  .ant-tabs-nav-list {
+    min-width: max-content;
+  }
+
+  .ant-pagination {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .chat-message {
+    max-width: 100%;
+  }
+
+  .chat-content {
+    line-height: 1.65;
+    word-break: break-word;
+  }
+
+  .chat-chart {
+    height: 240px !important;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-shell {
+    grid-template-columns: 52px minmax(0, 1fr) !important;
+  }
+
+  .app-sidebar {
+    width: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
+  }
+
+  .app-brand {
+    min-height: 60px;
+    padding: 12px 6px;
+  }
+
+  .app-sidebar .ant-menu-item,
+  .app-sidebar .ant-menu-submenu-title {
+    width: 44px !important;
+    margin: 2px 6px !important;
+    padding-inline: 12px !important;
+  }
+
+  .app-sidebar .ant-menu-submenu-arrow {
+    display: none;
+  }
+
+  .app-content {
+    padding: 12px 10px 22px;
+  }
+
+  .app-header {
+    padding: 8px 10px;
+  }
+
+  .app-header-title {
+    font-size: 14px;
+  }
+
+  .app-header .ant-btn {
+    padding-inline: 10px;
+  }
+
+  .metric-grid,
+  .chart-grid,
+  .permission-grid,
+  .insight-grid,
+  .student-kpi-grid,
+  .plan-metric-grid,
+  .alias-metric-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .metric-card {
+    padding: 13px;
+  }
+
+  .metric-value {
+    font-size: 22px;
+  }
+
+  .page-title {
+    font-size: 21px;
+  }
+
+  .login-page {
+    padding: 14px;
+  }
+
+  .login-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .ant-modal-body {
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+  }
+
+  .ant-table-wrapper .ant-table {
+    min-width: 620px;
+  }
+
+  .student-detail-hero,
+  .student-management-panel,
+  .student-table-header {
+    padding: 14px;
+  }
+
+  .student-detail-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 10px;
+  }
+
+  .student-detail-identity h2 {
+    font-size: 19px;
+  }
+
+  .chat-panel {
+    min-height: 300px;
+  }
+
+  .chat-message {
+    padding: 11px;
+    border-radius: 10px;
+  }
+
+  .report-form,
+  .report-preview {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-sidebar .ant-menu-item,
+  .app-sidebar .ant-menu-submenu-title {
+    width: 40px !important;
+    margin: 2px 5px !important;
+    padding-inline: 10px !important;
+  }
+
+  .app-content {
+    padding: 10px 8px 20px;
+  }
+
+  .app-header-title {
+    max-width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .metric-value {
+    font-size: 20px;
+  }
+
+  .login-card {
+    padding: 18px 14px;
+  }
+}

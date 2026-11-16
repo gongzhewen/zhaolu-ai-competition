@@ -1,0 +1,12 @@
+[mysqld]
+innodb_buffer_pool_size=256M
+innodb_log_file_size=64M
+max_connections=20
+table_open_cache=200
+performance_schema=OFF
+skip_name_resolve=ON
+character-set-server=utf8mb4
+collation-server=utf8mb4_0900_ai_ci
+
+[client]
+default-character-set=utf8mb4

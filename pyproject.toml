@@ -1,0 +1,62 @@
+[project]
+name = "zhaolu-ai-v2"
+version = "0.1.0"
+description = "高校招生人工智能数据分析与决策平台 V2"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.8",
+  "pydantic-settings>=2.4",
+  "pyjwt>=2.10",
+  "sqlalchemy[asyncio]>=2.0.30",
+  "asyncpg>=0.29",
+  "asyncmy>=0.2.10",
+  "cryptography>=43",
+  "psycopg[binary]>=3.2",
+  "alembic>=1.13",
+  "httpx>=0.27",
+  "redis>=5.0",
+  "python-multipart>=0.0.9",
+  "openpyxl>=3.1",
+  "xlrd>=2.0.1",
+  "dbfread>=2.0.7",
+  "python-docx>=1.1",
+  "reportlab>=4.2",
+  "fastembed>=0.9,<1.0",
+  "onnxruntime>=1.17,<1.24",
+  "tokenizers>=0.15,<1.0",
+  "numpy>=1.26,<2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "pytest-asyncio>=0.23",
+  "ruff>=0.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "packages/agent_core",
+  "packages/data_contracts",
+  "apps/api",
+]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+
+
+
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["apps/api", "packages/agent_core", "packages/data_contracts"]
+include = ["app*", "agent_core*", "data_contracts*"]
+
+

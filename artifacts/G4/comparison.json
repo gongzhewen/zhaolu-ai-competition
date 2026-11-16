@@ -1,0 +1,100 @@
+{
+  "evaluation_kind": "2c4g_shaped_concurrency_comparison",
+  "date": "2026-11-07",
+  "resources": {
+    "limits": {
+      "backend_cpu": 1.0,
+      "mysql_cpu": 0.75,
+      "web_cpu": 0.25,
+      "total_cpu": 2.0,
+      "backend_memory_mib": 1100,
+      "mysql_memory_mib": 1200,
+      "web_memory_mib": 128,
+      "total_memory_mib": 2428
+    },
+    "post_load_snapshot": {
+      "backend_cpu_percent": 0.27,
+      "backend_memory_mib": 316.6,
+      "mysql_cpu_percent": 0.68,
+      "mysql_memory_mib": 218.4,
+      "web_cpu_percent": 0.0,
+      "web_memory_mib": 14.98
+    },
+    "database_pool": {
+      "pool_size": 8,
+      "max_overflow": 4,
+      "max_connections": 12
+    }
+  },
+  "pre_pool_fix": {
+    "12_concurrency": {
+      "requests": 60,
+      "successful_requests": 60,
+      "success_rate": 1.0,
+      "throughput_rps": 6.931,
+      "latency_ms": {
+        "p50": 1695.71,
+        "p95": 2296.86,
+        "p99": 2495.91,
+        "max": 2495.91
+      },
+      "http_status_counts": {
+        "200": 60
+      }
+    },
+    "24_concurrency": {
+      "requests": 120,
+      "successful_requests": 108,
+      "success_rate": 0.9,
+      "throughput_rps": 8.321,
+      "latency_ms": {
+        "p50": 3105.29,
+        "p95": 3872.31,
+        "p99": 4084.97,
+        "max": 4097.03
+      },
+      "http_status_counts": {
+        "500": 12,
+        "200": 108
+      }
+    },
+    "root_cause": "NullPool allowed unbounded MySQL connection creation; at 24 concurrency asyncmy connection creation intermittently failed against MySQL max_connections=20."
+  },
+  "post_pool_fix": {
+    "12_concurrency": {
+      "requests": 60,
+      "successful_requests": 60,
+      "success_rate": 1.0,
+      "throughput_rps": 7.411,
+      "latency_ms": {
+        "p50": 1498.85,
+        "p95": 1895.97,
+        "p99": 2190.43,
+        "max": 2190.43
+      },
+      "http_status_counts": {
+        "200": 60
+      }
+    },
+    "24_concurrency": {
+      "requests": 120,
+      "successful_requests": 120,
+      "success_rate": 1.0,
+      "throughput_rps": 8.322,
+      "latency_ms": {
+        "p50": 2296.98,
+        "p95": 6345.67,
+        "p99": 8375.39,
+        "max": 8527.85
+      },
+      "http_status_counts": {
+        "200": 120
+      }
+    }
+  },
+  "recommendation": {
+    "interactive_demo_concurrency": "12-16",
+    "reason": "12 concurrent keeps P95 below 2 seconds; 24 concurrent remains error-free but P95 rises above 6 seconds on a 1-vCPU backend quota."
+  },
+  "boundary": "Docker CPU/memory quotas approximate a 2-core 4G deployment; host hardware and network differ from the final cloud server."
+}

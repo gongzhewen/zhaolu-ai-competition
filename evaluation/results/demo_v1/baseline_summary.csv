@@ -1,0 +1,4 @@
+﻿method,total,overall_accuracy,answer_accuracy,strategy_accuracy,tool_plan_accuracy,exact_metric_accuracy,correct_refusal_rate,false_refusal_rate,answer_coverage,unsupported_answer_rate,privacy_violations
+g1_full,121,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.9504,0.0,0
+g0_rule_tool,121,0.9587,0.9583,0.9587,1.0,1.0,0.1667,0.0,0.9917,0.0417,1
+b1_local_rag_only,121,0.0,0.0,0.9504,0.0,0.0,0.0,0.0,1.0,1.0,1

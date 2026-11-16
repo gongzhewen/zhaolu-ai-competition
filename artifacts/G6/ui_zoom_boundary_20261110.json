@@ -1,0 +1,292 @@
+{
+  "failed": [],
+  "results": [
+    {
+      "width": 1600,
+      "height": 900,
+      "scale": "100%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scale": "100%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      }
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "scale": "113%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      }
+    },
+    {
+      "width": 1152,
+      "height": 720,
+      "scale": "125%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      }
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "scale": "141%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      }
+    },
+    {
+      "width": 992,
+      "height": 700,
+      "scale": "145%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 232,
+        "mainLeft": 232,
+        "violations": []
+      }
+    },
+    {
+      "width": 991,
+      "height": 700,
+      "scale": "145%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      }
+    },
+    {
+      "width": 960,
+      "height": 600,
+      "scale": "150%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      }
+    },
+    {
+      "width": 768,
+      "height": 700,
+      "scale": "188%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 64,
+        "mainLeft": 64,
+        "violations": []
+      }
+    },
+    {
+      "width": 500,
+      "height": 700,
+      "scale": "200%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 52,
+        "mainLeft": 52,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 52,
+        "mainLeft": 52,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 52,
+        "mainLeft": 52,
+        "violations": []
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scale": "250%",
+      "dashboard": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 52,
+        "mainLeft": 52,
+        "violations": []
+      },
+      "admissions": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 52,
+        "mainLeft": 52,
+        "violations": []
+      },
+      "students": {
+        "documentOverflow": false,
+        "gridMismatch": false,
+        "sidebarRight": 52,
+        "mainLeft": 52,
+        "violations": []
+      }
+    }
+  ],
+  "pageErrors": []
+}

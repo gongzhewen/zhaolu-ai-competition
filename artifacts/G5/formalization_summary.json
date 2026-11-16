@@ -1,0 +1,67 @@
+{
+  "version": "ECSP-Admissions-G1.2",
+  "date": "2026-11-07",
+  "implemented": {
+    "coverage_objective": true,
+    "false_answer_rate_constraint": true,
+    "unsupported_answer_rate_constraint": true,
+    "privacy_violation_zero": true,
+    "p95_latency_budget": true,
+    "slot_entropy": true,
+    "weighted_semantic_uncertainty": true,
+    "continuous_result_similarity": true,
+    "plan_consistency_threshold": true,
+    "formal_answer_conditions": true
+  },
+  "constraints": {
+    "unsupported_answer_alpha": 0.0,
+    "p95_latency_budget_ms": 2000.0,
+    "privacy_violation_limit": 0,
+    "plan_consistency_threshold": 1.0
+  },
+  "demo_gold": {
+    "cases": 121,
+    "overall_accuracy": 1.0,
+    "exact_metric_accuracy": 1.0,
+    "answer_coverage": 0.9504,
+    "unsupported_answer_rate": 0.0,
+    "privacy_violations": 0,
+    "p95_ms": 308.288,
+    "p95_within_budget": true
+  },
+  "concurrency": {
+    "12c_p95_ms": 1895.97,
+    "12c_within_budget": true,
+    "24c_p95_ms": 6345.67,
+    "24c_within_budget": false
+  },
+  "boundary": "演示库与 Docker 配额验证，不是最终真实授权云环境实验。",
+  "full_regression": {
+    "total": 140,
+    "passed": 140,
+    "failed": 0,
+    "skipped": 0
+  },
+  "api_validation": {
+    "version": "ECSP-Admissions-G1.2",
+    "ambiguous_question": {
+      "question": "招生人数和录取人数分别是多少",
+      "strategy": "clarify",
+      "metric_entropy": 1.0,
+      "semantic_uncertainty": 0.3,
+      "can_answer": false
+    },
+    "normal_question": {
+      "question": "2026年招生计划和录取人数分别是多少",
+      "strategy": "answer",
+      "can_answer": true
+    },
+    "constraints": {
+      "plan_consistency_threshold": 1.0,
+      "unsupported_answer_alpha": 0.0,
+      "p95_latency_budget_ms": 2000.0,
+      "p95_within_budget": true
+    },
+    "boundary": "HTTP verification against the local demonstration environment."
+  }
+}

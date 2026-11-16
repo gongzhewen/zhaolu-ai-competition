@@ -1,0 +1,17 @@
+[Unit]
+Description=Zhaolu AI V2 API
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=zhaolu
+Group=zhaolu
+WorkingDirectory=/opt/zhaolu-ai-v2
+EnvironmentFile=/opt/zhaolu-ai-v2/apps/api/.env.mysql
+ExecStart=/opt/zhaolu-ai-v2/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

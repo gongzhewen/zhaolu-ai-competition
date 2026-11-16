@@ -1,0 +1,25 @@
+{
+  "evaluation_kind": "local_model_concurrency",
+  "requests": 3,
+  "all_ok": true,
+  "rows": [
+    {
+      "index": 1,
+      "status": 200,
+      "elapsed_ms": 1610.72,
+      "ok": true
+    },
+    {
+      "index": 2,
+      "status": 200,
+      "elapsed_ms": 1280.9,
+      "ok": true
+    },
+    {
+      "index": 3,
+      "status": 200,
+      "elapsed_ms": 1843.58,
+      "ok": true
+    }
+  ]
+}

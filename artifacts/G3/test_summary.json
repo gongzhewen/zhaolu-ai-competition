@@ -1,0 +1,48 @@
+{
+  "version": "ECSP-Admissions-G1.1",
+  "date": "2026-11-07",
+  "full_regression": {
+    "total": 130,
+    "passed": 130,
+    "failed": 0,
+    "skipped": 0
+  },
+  "http_probe": {
+    "chat_runs": 2,
+    "cache_miss_delta": 1,
+    "cache_l1_delta": 1,
+    "expected_cache_miss_then_hit": true,
+    "first_strategy": "answer",
+    "second_strategy": "answer",
+    "latency_ms": {
+      "p50": 4.7,
+      "p95": 51.6,
+      "p99": 51.6,
+      "max": 51.6
+    },
+    "rates": {
+      "fast_route_rate": 1.0,
+      "cache_hit_rate": 0.5,
+      "cache_l2_rate": 0.0,
+      "dual_planning_trigger_rate": 0.0,
+      "llm_timeout_rate": 0.0,
+      "llm_rejection_rate": 0.0,
+      "answer_rate": 1.0,
+      "clarification_rate": 0.0,
+      "refusal_rate": 0.0
+    }
+  },
+  "governance_response_contract": {
+    "risk_decision": true,
+    "evidence_certificates": true,
+    "numeric_verification": true,
+    "plan_consistency": true,
+    "algorithm_version": true
+  },
+  "boundaries": [
+    "single-instance HTTP probe, not a concurrency load test",
+    "two samples are insufficient for production P95/P99",
+    "MiniMind disabled so dual planning and model timeout remain zero",
+    "multi-instance deployment requires shared Redis metrics"
+  ]
+}

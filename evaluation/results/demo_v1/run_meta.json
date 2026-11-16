@@ -1,0 +1,52 @@
+{
+  "evaluation_kind": "demo_gold_end_to_end",
+  "gold_dataset": true,
+  "real_authorized_frozen_set": false,
+  "data_scope": "local demonstration database zhaolu_v2",
+  "data_profile": {
+    "dim_major": 64,
+    "dim_province": 16,
+    "fact_plan": 5120,
+    "fact_admission_record": 28450,
+    "fact_student_identity": 28450,
+    "fact_enrollment_status": 28450
+  },
+  "dataset_meta": {
+    "version": "demo-gold-v1",
+    "generated_on": "2026-11-07",
+    "data_scope": "local demonstration database zhaolu_v2",
+    "years": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "data_profile": {
+      "dim_major": 64,
+      "dim_province": 16,
+      "fact_plan": 5120,
+      "fact_admission_record": 28450,
+      "fact_student_identity": 28450,
+      "fact_enrollment_status": 28450
+    },
+    "case_count": 121,
+    "answer_cases": 115,
+    "boundary_cases": 6,
+    "gold_method": "independent deterministic SQL against the configured demonstration database",
+    "not_a_real_frozen_test_set": true,
+    "contains_student_details": false
+  },
+  "cases": 121,
+  "methods": [
+    "g1_full",
+    "g0_rule_tool",
+    "b1_local_rag_only"
+  ],
+  "external_model_calls": 0,
+  "g1_dual_planning_triggered": 0,
+  "b2_local_text_to_sql": {
+    "status": "not_run",
+    "reason": "未配置可审计的本地 Text-to-SQL 模型服务；不使用外部 API 替代。"
+  }
+}

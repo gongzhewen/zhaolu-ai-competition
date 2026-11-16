@@ -1,0 +1,5 @@
+docs/06_G1_测试与验收报告_20261107.md
+docs/08_国赛答辩技术证据.md
+docs/09_G1_部署配置清单.md
+artifacts/G1/test_summary.json
+artifacts/G1/docker_acceptance.json

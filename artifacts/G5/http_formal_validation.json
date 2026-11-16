@@ -1,0 +1,22 @@
+{
+  "version": "ECSP-Admissions-G1.2",
+  "ambiguous_question": {
+    "question": "招生人数和录取人数分别是多少",
+    "strategy": "clarify",
+    "metric_entropy": 1.0,
+    "semantic_uncertainty": 0.3,
+    "can_answer": false
+  },
+  "normal_question": {
+    "question": "2026年招生计划和录取人数分别是多少",
+    "strategy": "answer",
+    "can_answer": true
+  },
+  "constraints": {
+    "plan_consistency_threshold": 1.0,
+    "unsupported_answer_alpha": 0.0,
+    "p95_latency_budget_ms": 2000.0,
+    "p95_within_budget": true
+  },
+  "boundary": "HTTP verification against the local demonstration environment."
+}

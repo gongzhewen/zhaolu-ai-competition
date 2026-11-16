@@ -1,0 +1,28 @@
+{
+  "evaluation_kind": "redis_shared_cache_multiprocess_verification",
+  "generated_at": "2026-11-09T16:22:35+00:00",
+  "redis_url": "redis://127.0.0.1:6379/15",
+  "namespace": "zhaolu_verify",
+  "independent_processes": 6,
+  "checks": {
+    "cross_process_shared_hit": true,
+    "school_version_invalidation": true,
+    "school_scope_isolation": true,
+    "global_version_invalidation": true,
+    "redis_metric_aggregation": true
+  },
+  "status": "passed",
+  "metrics": {
+    "source": "redis",
+    "sample_count": 2,
+    "latency_ms": {
+      "p50": 31.0,
+      "p95": 47.0,
+      "p99": 47.0,
+      "max": 47.0
+    },
+    "cache_hit_rate": 1.0,
+    "chat_total": 2
+  },
+  "boundary": "本验证使用独立 Redis DB 和多个独立 Python 进程模拟应用实例；不等同于生产 Redis 集群、网络分区或高可用故障演练。"
+}

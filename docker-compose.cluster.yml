@@ -1,0 +1,63 @@
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --maxmemory
+      - 96mb
+      - --maxmemory-policy
+      - allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    mem_limit: 128m
+
+  backend:
+    environment:
+      REDIS_ENABLED: "true"
+      REDIS_URL: redis://redis:6379/0
+      INSTANCE_ID: backend-1
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
+
+  backend-2:
+    image: zhaolu-ai-v2-backend:local
+    build:
+      context: .
+      dockerfile: deploy/docker/backend.Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env.docker
+    environment:
+      DATABASE_URL: mysql+asyncmy://${MYSQL_USER}:${MYSQL_PASSWORD}@mysql:3306/${MYSQL_DATABASE}
+      ENVIRONMENT: production
+      REDIS_ENABLED: "true"
+      REDIS_URL: redis://redis:6379/0
+      INSTANCE_ID: backend-2
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${BACKEND2_PORT:-8001}:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8000/api/v1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    mem_limit: 1100m

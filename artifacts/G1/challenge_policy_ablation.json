@@ -1,0 +1,28 @@
+{
+  "evaluation_kind": "synthetic_policy_ablation",
+  "end_to_end": false,
+  "gold_dataset": false,
+  "boundary": "消融只比较路由、歧义和隐私策略，不含数据库工具执行、答案生成或本地大模型。",
+  "variants": {
+    "router_only": {
+      "strategy_matches": 107,
+      "total": 120,
+      "strategy_match_rate": 0.8917
+    },
+    "ambiguity_only": {
+      "strategy_matches": 119,
+      "total": 120,
+      "strategy_match_rate": 0.9917
+    },
+    "privacy_only": {
+      "strategy_matches": 108,
+      "total": 120,
+      "strategy_match_rate": 0.9
+    },
+    "g1_policy_full": {
+      "strategy_matches": 120,
+      "total": 120,
+      "strategy_match_rate": 1.0
+    }
+  }
+}

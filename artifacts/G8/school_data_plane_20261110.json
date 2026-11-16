@@ -1,0 +1,18 @@
+{
+  "evaluation_kind": "independent_school_data_plane_verification",
+  "generated_at": "2026-11-09T16:30:34+00:00",
+  "school_totals": {
+    "school_1": 28447,
+    "school_2": 12345
+  },
+  "school_2_tool_plan_count": 12345,
+  "checks": {
+    "school_1_plane_reachable": true,
+    "school_2_plane_reachable": true,
+    "different_plan_totals": true,
+    "tool_uses_school_2_session": true,
+    "unknown_school_rejected": true
+  },
+  "status": "passed",
+  "boundary": "验证在第二套临时 MySQL 数据面上完成；不等同于生产学校账号权限审计、跨主机网络隔离或长期运行验证。"
+}

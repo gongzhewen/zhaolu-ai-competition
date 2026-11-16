@@ -1,0 +1,761 @@
+{
+  "evaluation_kind": "paired_significance_and_error_distribution",
+  "dataset": "m1-real-frozen-v2",
+  "generated_at": "2026-11-09T16:44:58+00:00",
+  "multiple_comparison_note": "共执行 5 组预先列出的配对比较；p 值用于描述性核验，若作族错误率控制可采用 Bonferroni 阈值 0.01。",
+  "pairs": [
+    {
+      "first_method": "g1_full",
+      "second_method": "g0_rule_tool",
+      "paired_cases": 120,
+      "first_accuracy": 1.0,
+      "second_accuracy": 0.9167,
+      "accuracy_delta": 0.0833,
+      "accuracy_delta_ci95": [
+        0.0333,
+        0.1333
+      ],
+      "both_correct": 110,
+      "both_wrong": 0,
+      "only_first_correct": 10,
+      "only_second_correct": 0,
+      "mcnemar_exact_p": 0.001953125,
+      "label": "完整算法 vs G0"
+    },
+    {
+      "first_method": "g1_full",
+      "second_method": "b1_local_rag_only",
+      "paired_cases": 120,
+      "first_accuracy": 1.0,
+      "second_accuracy": 0.0,
+      "accuracy_delta": 1.0,
+      "accuracy_delta_ci95": [
+        1.0,
+        1.0
+      ],
+      "both_correct": 0,
+      "both_wrong": 0,
+      "only_first_correct": 120,
+      "only_second_correct": 0,
+      "mcnemar_exact_p": 1.504633e-36,
+      "label": "完整算法 vs B1"
+    },
+    {
+      "first_method": "g1_full",
+      "second_method": "b2_local_text_to_sql",
+      "paired_cases": 120,
+      "first_accuracy": 1.0,
+      "second_accuracy": 0.1667,
+      "accuracy_delta": 0.8333,
+      "accuracy_delta_ci95": [
+        0.7667,
+        0.9
+      ],
+      "both_correct": 20,
+      "both_wrong": 0,
+      "only_first_correct": 100,
+      "only_second_correct": 0,
+      "mcnemar_exact_p": 1.577722e-30,
+      "label": "完整算法 vs B2"
+    },
+    {
+      "first_method": "g1_full",
+      "second_method": "no_alias_normalization",
+      "paired_cases": 120,
+      "first_accuracy": 1.0,
+      "second_accuracy": 0.9,
+      "accuracy_delta": 0.1,
+      "accuracy_delta_ci95": [
+        0.05,
+        0.1583
+      ],
+      "both_correct": 108,
+      "both_wrong": 0,
+      "only_first_correct": 12,
+      "only_second_correct": 0,
+      "mcnemar_exact_p": 0.0004882812,
+      "label": "完整算法 vs 关闭别名归一化"
+    },
+    {
+      "first_method": "g1_full",
+      "second_method": "no_privacy_hard_constraint",
+      "paired_cases": 120,
+      "first_accuracy": 1.0,
+      "second_accuracy": 0.9417,
+      "accuracy_delta": 0.0583,
+      "accuracy_delta_ci95": [
+        0.0167,
+        0.1
+      ],
+      "both_correct": 113,
+      "both_wrong": 0,
+      "only_first_correct": 7,
+      "only_second_correct": 0,
+      "mcnemar_exact_p": 0.015625,
+      "label": "完整算法 vs 关闭隐私硬约束"
+    }
+  ],
+  "category_pairs": {
+    "g1_full__vs__g0_rule_tool": [
+      {
+        "category": "专业别名和口语表达",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "单条件统计",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "多条件筛选",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "录取报到与流失",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "志愿和生源画像",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "成绩与分数段",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "缺失无数据与歧义",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.25,
+        "accuracy_delta": 0.75,
+        "accuracy_delta_ci95": [
+          0.5,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.00390625
+      },
+      {
+        "category": "计划完成率",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "跨年趋势与比较",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "隐私小样本与超范围",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.9167,
+        "accuracy_delta": 0.0833,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.25
+        ],
+        "mcnemar_exact_p": 1.0
+      }
+    ],
+    "g1_full__vs__b1_local_rag_only": [
+      {
+        "category": "专业别名和口语表达",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "单条件统计",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "多条件筛选",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "录取报到与流失",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "志愿和生源画像",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "成绩与分数段",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "缺失无数据与歧义",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "计划完成率",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "跨年趋势与比较",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "隐私小样本与超范围",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      }
+    ],
+    "g1_full__vs__b2_local_text_to_sql": [
+      {
+        "category": "专业别名和口语表达",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "单条件统计",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.25,
+        "accuracy_delta": 0.75,
+        "accuracy_delta_ci95": [
+          0.5,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.00390625
+      },
+      {
+        "category": "多条件筛选",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "录取报到与流失",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "志愿和生源画像",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "成绩与分数段",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "缺失无数据与歧义",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.4167,
+        "accuracy_delta": 0.5833,
+        "accuracy_delta_ci95": [
+          0.3333,
+          0.8333
+        ],
+        "mcnemar_exact_p": 0.015625
+      },
+      {
+        "category": "计划完成率",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "跨年趋势与比较",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "隐私小样本与超范围",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      }
+    ],
+    "g1_full__vs__no_alias_normalization": [
+      {
+        "category": "专业别名和口语表达",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.0,
+        "accuracy_delta": 1.0,
+        "accuracy_delta_ci95": [
+          1.0,
+          1.0
+        ],
+        "mcnemar_exact_p": 0.0004882812
+      },
+      {
+        "category": "单条件统计",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "多条件筛选",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "录取报到与流失",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "志愿和生源画像",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "成绩与分数段",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "缺失无数据与歧义",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "计划完成率",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "跨年趋势与比较",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "隐私小样本与超范围",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      }
+    ],
+    "g1_full__vs__no_privacy_hard_constraint": [
+      {
+        "category": "专业别名和口语表达",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "单条件统计",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "多条件筛选",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "录取报到与流失",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "志愿和生源画像",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "成绩与分数段",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "缺失无数据与歧义",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "计划完成率",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "跨年趋势与比较",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 1.0,
+        "accuracy_delta": 0.0,
+        "accuracy_delta_ci95": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p": 1.0
+      },
+      {
+        "category": "隐私小样本与超范围",
+        "cases": 12,
+        "first_accuracy": 1.0,
+        "second_accuracy": 0.4167,
+        "accuracy_delta": 0.5833,
+        "accuracy_delta_ci95": [
+          0.3333,
+          0.8333
+        ],
+        "mcnemar_exact_p": 0.015625
+      }
+    ]
+  },
+  "error_distributions": {
+    "g1_full": {
+      "no_error": 94,
+      "intent_mismatch": 26,
+      "parameter_mismatch": 12,
+      "tool_mismatch": 12
+    },
+    "g0_rule_tool": {
+      "no_error": 94,
+      "intent_mismatch": 26,
+      "parameter_mismatch": 12,
+      "tool_mismatch": 12,
+      "strategy_mismatch": 10
+    },
+    "b1_local_rag_only": {
+      "intent_mismatch": 120,
+      "parameter_mismatch": 96,
+      "tool_mismatch": 96,
+      "metric_mismatch": 84,
+      "strategy_mismatch": 24,
+      "privacy_violation": 7,
+      "unsafe_answer": 7
+    },
+    "b2_local_text_to_sql": {
+      "parameter_mismatch": 96,
+      "tool_mismatch": 96,
+      "metric_mismatch": 66,
+      "intent_mismatch": 26,
+      "strategy_mismatch": 22,
+      "execution_error": 19,
+      "false_refusal": 15,
+      "no_error": 10
+    },
+    "no_alias_normalization": {
+      "no_error": 82,
+      "intent_mismatch": 26,
+      "false_refusal": 12,
+      "parameter_mismatch": 12,
+      "strategy_mismatch": 12,
+      "tool_mismatch": 12
+    },
+    "no_privacy_hard_constraint": {
+      "no_error": 87,
+      "intent_mismatch": 33,
+      "parameter_mismatch": 12,
+      "tool_mismatch": 12,
+      "privacy_violation": 7,
+      "strategy_mismatch": 7,
+      "unsafe_answer": 7
+    }
+  }
+}

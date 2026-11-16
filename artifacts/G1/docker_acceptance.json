@@ -1,0 +1,41 @@
+{
+  "evaluation_kind": "docker_compose_acceptance",
+  "date": "2026-11-07",
+  "project_name": "zhaolu-ai-g1-verify",
+  "host_port": 3100,
+  "docker_engine_version": "29.8.0",
+  "docker_desktop_version": "4.91.0",
+  "services": {
+    "mysql": {
+      "status": "healthy"
+    },
+    "backend": {
+      "status": "healthy"
+    },
+    "web": {
+      "status": "running",
+      "frontend_http_status": 200
+    },
+    "demo_init": {
+      "exit_code": 0,
+      "log": "mysql_demo_seed=ok"
+    }
+  },
+  "capabilities": {
+    "runtime": "agent_core_v2",
+    "tool_count": 17,
+    "rag_vector_enabled": true
+  },
+  "container_agent_smoke": {
+    "runs": 9,
+    "passed": 9,
+    "pass_rate": 1.0,
+    "p50_ms": 3.688,
+    "p95_ms": 22.264
+  },
+  "restart_recovery": {
+    "backend_healthy": true,
+    "web_healthy": true
+  },
+  "boundary": "验证使用隔离 Compose 项目和演示数据，不代表目标云服务器正式域名、HTTPS 或 2 核 4G 并发容量已完成验收。"
+}

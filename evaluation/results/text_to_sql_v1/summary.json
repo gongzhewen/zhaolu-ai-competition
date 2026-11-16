@@ -1,0 +1,28 @@
+{
+  "method": "b2_local_text_to_sql",
+  "total": 121,
+  "overall_accuracy": 0.9339,
+  "strategy_accuracy": 0.9421,
+  "exact_metric_accuracy": 0.9304,
+  "correct_refusal_rate": 1.0,
+  "false_refusal_rate": 0.0609,
+  "answer_coverage": 0.8926,
+  "privacy_violations": 0,
+  "latency_ms": {
+    "p50": 16337.08,
+    "p95": 17583.32,
+    "p99": 68974.73
+  },
+  "status": "completed",
+  "model": "qwen2.5-coder-3b",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "data_profile": {
+    "dim_major": 64,
+    "dim_province": 16,
+    "fact_plan": 5120,
+    "fact_admission_record": 28450,
+    "fact_student_identity": 28450,
+    "fact_enrollment_status": 28450
+  },
+  "boundary": "本地 Text-to-SQL 强基线，不使用外部 API；结果仅针对当前演示金标准。"
+}

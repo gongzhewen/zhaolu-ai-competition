@@ -1,0 +1,7 @@
+time=2026-11-07T12:29:09.2552432+08:00
+run_directory_moved=True
+backup_path=C:\Users\Administrator\AppData\Local\Docker\run.bad-20261107-122438
+service_status=Running
+docker_desktop_running=False
+docker_info_ok=False
+docker_info_output=failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.

@@ -1,0 +1,9 @@
+{
+  "base_model": "ernie-3.0-nano-zh",
+  "max_length": 96,
+  "opset_version": 15,
+  "input_names": [
+    "input_ids",
+    "token_type_ids"
+  ]
+}

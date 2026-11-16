@@ -1,0 +1,815 @@
+{
+  "evaluation_kind": "dual_planning_calibration_probe",
+  "generated_at": "2026-11-09T14:45:46+00:00",
+  "dataset_years": [
+    2022,
+    2023
+  ],
+  "sample_policy": "24 high-risk probe questions using calibration years only",
+  "on": {
+    "variant": "dual_planning_on",
+    "cases": 24,
+    "local_model_plans": 1,
+    "dual_planning_triggered": 0,
+    "dual_planning_consistent": 0,
+    "answered": 20,
+    "blocked": 4,
+    "latency_ms": {
+      "p50": 973.39,
+      "p95": 5959.31,
+      "max": 5961.86
+    },
+    "elapsed_seconds": 52.043,
+    "cases_detail": [
+      {
+        "case_id": "DUAL-001",
+        "category": "forecast",
+        "question": "预测2023年土木工程招生计划和录取情况，并分析历史趋势",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 62.35
+      },
+      {
+        "case_id": "DUAL-002",
+        "category": "forecast",
+        "question": "结合历史趋势预测2024年人工智能专业招生规模",
+        "intent": "clarify",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "clarify",
+        "can_answer": false,
+        "latency_ms": 2.35
+      },
+      {
+        "case_id": "DUAL-003",
+        "category": "forecast",
+        "question": "分析2023年临床医学专业计划完成风险并预测明年计划",
+        "intent": "anomaly_detection",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "anomaly_detection",
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 1573.56
+      },
+      {
+        "case_id": "DUAL-004",
+        "category": "cross_metric",
+        "question": "为什么2023年计算机科学与技术专业招生计划可能需要调整",
+        "intent": "admissions_overview",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5018.76
+      },
+      {
+        "case_id": "DUAL-005",
+        "category": "plan_simulation",
+        "question": "如果土木工程增加20个计划，结合历史完成率和志愿热度分析风险",
+        "intent": "plan_simulation",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5941.57
+      },
+      {
+        "case_id": "DUAL-006",
+        "category": "plan_simulation",
+        "question": "计算机科学与技术减少10个计划会怎样，结合志愿热度评估风险",
+        "intent": "plan_simulation",
+        "plan_summary": "本地模型工具规划 + 规则计划核验",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5741.38
+      },
+      {
+        "case_id": "DUAL-007",
+        "category": "trend_analysis",
+        "question": "比较2022和2023年软件工程录取趋势并解释原因",
+        "intent": "admissions_overview",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5041.9
+      },
+      {
+        "case_id": "DUAL-008",
+        "category": "cross_metric",
+        "question": "综合分析2023年招生计划和生源情况，给出优化建议",
+        "intent": "source_overview",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "admissions_overview",
+          "source_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 97.47
+      },
+      {
+        "case_id": "DUAL-009",
+        "category": "forecast",
+        "question": "预测2023年各省招生计划变化并说明风险",
+        "intent": "admissions_overview",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "anomaly_detection",
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 973.39
+      },
+      {
+        "case_id": "DUAL-010",
+        "category": "forecast",
+        "question": "结合2022到2023年历史数据预测2024年招生计划",
+        "intent": "forecast",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5091.52
+      },
+      {
+        "case_id": "DUAL-011",
+        "category": "anomaly_detection",
+        "question": "分析2023年专业计划完成率和志愿热度之间的风险",
+        "intent": "anomaly_detection",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "anomaly_detection"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 914.47
+      },
+      {
+        "case_id": "DUAL-012",
+        "category": "plan_simulation",
+        "question": "如果人工智能扩招15个计划，计划完成率和报到率会如何变化",
+        "intent": "plan_simulation",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5961.86
+      },
+      {
+        "case_id": "DUAL-013",
+        "category": "trend_analysis",
+        "question": "比较2022年和2023年不同省份的录取规模和完成率",
+        "intent": "admissions_overview",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "no_data",
+        "can_answer": false,
+        "latency_ms": 0.24
+      },
+      {
+        "case_id": "DUAL-014",
+        "category": "cross_metric",
+        "question": "为什么2023年招生计划与录取人数出现差异，给出调整建议",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 107.9
+      },
+      {
+        "case_id": "DUAL-015",
+        "category": "anomaly_detection",
+        "question": "分析2023年临床医学专业异常波动和计划缺口",
+        "intent": "anomaly_detection",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "anomaly_detection"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 938.89
+      },
+      {
+        "case_id": "DUAL-016",
+        "category": "forecast",
+        "question": "预测2024年计算机科学与技术专业招生规模，考虑志愿热度",
+        "intent": "clarify",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "clarify",
+        "can_answer": false,
+        "latency_ms": 0.35
+      },
+      {
+        "case_id": "DUAL-017",
+        "category": "plan_simulation",
+        "question": "如果软件工程减少10个计划，报到率和风险如何变化",
+        "intent": "plan_simulation",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5959.31
+      },
+      {
+        "case_id": "DUAL-018",
+        "category": "cross_metric",
+        "question": "综合分析2023年招生计划、录取和报到情况，给出决策建议",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 78.15
+      },
+      {
+        "case_id": "DUAL-019",
+        "category": "forecast",
+        "question": "预测2023年各学院计划完成率并识别高风险专业",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "anomaly_detection",
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 978.5
+      },
+      {
+        "case_id": "DUAL-020",
+        "category": "trend_analysis",
+        "question": "比较2022和2023年各省生源和报到趋势",
+        "intent": "source_overview",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "source_overview",
+          "admissions_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 199.19
+      },
+      {
+        "case_id": "DUAL-021",
+        "category": "cross_metric",
+        "question": "分析2023年计划调整对录取和报到的影响",
+        "intent": "student_lookup",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 48.03
+      },
+      {
+        "case_id": "DUAL-022",
+        "category": "plan_simulation",
+        "question": "如果增加专项计划20个，结合历史计划完成率评估风险",
+        "intent": "clarify",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "clarify",
+        "can_answer": false,
+        "latency_ms": 0.23
+      },
+      {
+        "case_id": "DUAL-023",
+        "category": "forecast",
+        "question": "预测2024年招生计划时，哪些专业需要优先调整",
+        "intent": "forecast",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5040.8
+      },
+      {
+        "case_id": "DUAL-024",
+        "category": "cross_metric",
+        "question": "综合分析2022到2023年招生、成绩和志愿数据，给出专业优化建议",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "subject_scores",
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 2270.95
+      }
+    ]
+  },
+  "off": {
+    "variant": "dual_planning_off",
+    "cases": 24,
+    "local_model_plans": 1,
+    "dual_planning_triggered": 0,
+    "dual_planning_consistent": 0,
+    "answered": 20,
+    "blocked": 4,
+    "latency_ms": {
+      "p50": 952.56,
+      "p95": 5953.1,
+      "max": 5959.03
+    },
+    "elapsed_seconds": 46.122,
+    "cases_detail": [
+      {
+        "case_id": "DUAL-001",
+        "category": "forecast",
+        "question": "预测2023年土木工程招生计划和录取情况，并分析历史趋势",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 25.53
+      },
+      {
+        "case_id": "DUAL-002",
+        "category": "forecast",
+        "question": "结合历史趋势预测2024年人工智能专业招生规模",
+        "intent": "clarify",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "clarify",
+        "can_answer": false,
+        "latency_ms": 0.41
+      },
+      {
+        "case_id": "DUAL-003",
+        "category": "forecast",
+        "question": "分析2023年临床医学专业计划完成风险并预测明年计划",
+        "intent": "anomaly_detection",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "anomaly_detection",
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 958.6
+      },
+      {
+        "case_id": "DUAL-004",
+        "category": "cross_metric",
+        "question": "为什么2023年计算机科学与技术专业招生计划可能需要调整",
+        "intent": "admissions_overview",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5036.03
+      },
+      {
+        "case_id": "DUAL-005",
+        "category": "plan_simulation",
+        "question": "如果土木工程增加20个计划，结合历史完成率和志愿热度分析风险",
+        "intent": "plan_simulation",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5959.03
+      },
+      {
+        "case_id": "DUAL-006",
+        "category": "plan_simulation",
+        "question": "计算机科学与技术减少10个计划会怎样，结合志愿热度评估风险",
+        "intent": "plan_simulation",
+        "plan_summary": "本地模型工具规划 + 规则计划核验",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 957.47
+      },
+      {
+        "case_id": "DUAL-007",
+        "category": "trend_analysis",
+        "question": "比较2022和2023年软件工程录取趋势并解释原因",
+        "intent": "admissions_overview",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5040.47
+      },
+      {
+        "case_id": "DUAL-008",
+        "category": "cross_metric",
+        "question": "综合分析2023年招生计划和生源情况，给出优化建议",
+        "intent": "source_overview",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "admissions_overview",
+          "source_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 96.03
+      },
+      {
+        "case_id": "DUAL-009",
+        "category": "forecast",
+        "question": "预测2023年各省招生计划变化并说明风险",
+        "intent": "admissions_overview",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "anomaly_detection",
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 952.56
+      },
+      {
+        "case_id": "DUAL-010",
+        "category": "forecast",
+        "question": "结合2022到2023年历史数据预测2024年招生计划",
+        "intent": "forecast",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5088.73
+      },
+      {
+        "case_id": "DUAL-011",
+        "category": "anomaly_detection",
+        "question": "分析2023年专业计划完成率和志愿热度之间的风险",
+        "intent": "anomaly_detection",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "anomaly_detection"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 914.01
+      },
+      {
+        "case_id": "DUAL-012",
+        "category": "plan_simulation",
+        "question": "如果人工智能扩招15个计划，计划完成率和报到率会如何变化",
+        "intent": "plan_simulation",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5937.86
+      },
+      {
+        "case_id": "DUAL-013",
+        "category": "trend_analysis",
+        "question": "比较2022年和2023年不同省份的录取规模和完成率",
+        "intent": "admissions_overview",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "no_data",
+        "can_answer": false,
+        "latency_ms": 0.21
+      },
+      {
+        "case_id": "DUAL-014",
+        "category": "cross_metric",
+        "question": "为什么2023年招生计划与录取人数出现差异，给出调整建议",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 71.64
+      },
+      {
+        "case_id": "DUAL-015",
+        "category": "anomaly_detection",
+        "question": "分析2023年临床医学专业异常波动和计划缺口",
+        "intent": "anomaly_detection",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "anomaly_detection"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 922.01
+      },
+      {
+        "case_id": "DUAL-016",
+        "category": "forecast",
+        "question": "预测2024年计算机科学与技术专业招生规模，考虑志愿热度",
+        "intent": "clarify",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "clarify",
+        "can_answer": false,
+        "latency_ms": 0.3
+      },
+      {
+        "case_id": "DUAL-017",
+        "category": "plan_simulation",
+        "question": "如果软件工程减少10个计划，报到率和风险如何变化",
+        "intent": "plan_simulation",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "plan_simulation"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5953.1
+      },
+      {
+        "case_id": "DUAL-018",
+        "category": "cross_metric",
+        "question": "综合分析2023年招生计划、录取和报到情况，给出决策建议",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 76.52
+      },
+      {
+        "case_id": "DUAL-019",
+        "category": "forecast",
+        "question": "预测2023年各学院计划完成率并识别高风险专业",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "anomaly_detection",
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 953.41
+      },
+      {
+        "case_id": "DUAL-020",
+        "category": "trend_analysis",
+        "question": "比较2022和2023年各省生源和报到趋势",
+        "intent": "source_overview",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "source_overview",
+          "admissions_overview"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 178.92
+      },
+      {
+        "case_id": "DUAL-021",
+        "category": "cross_metric",
+        "question": "分析2023年计划调整对录取和报到的影响",
+        "intent": "student_lookup",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 40.82
+      },
+      {
+        "case_id": "DUAL-022",
+        "category": "plan_simulation",
+        "question": "如果增加专项计划20个，结合历史计划完成率评估风险",
+        "intent": "clarify",
+        "plan_summary": "规则路由边界处理",
+        "tools": [],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "clarify",
+        "can_answer": false,
+        "latency_ms": 0.22
+      },
+      {
+        "case_id": "DUAL-023",
+        "category": "forecast",
+        "question": "预测2024年招生计划时，哪些专业需要优先调整",
+        "intent": "forecast",
+        "plan_summary": "规则工具路由（单计划快速路径）",
+        "tools": [
+          "forecast"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 5061.93
+      },
+      {
+        "case_id": "DUAL-024",
+        "category": "cross_metric",
+        "question": "综合分析2022到2023年招生、成绩和志愿数据，给出专业优化建议",
+        "intent": "admissions_statistics",
+        "plan_summary": "规则多工具协调计划",
+        "tools": [
+          "subject_scores",
+          "admissions_statistics"
+        ],
+        "triggered": false,
+        "consistent": true,
+        "similarity": 1.0,
+        "strategy": "answer",
+        "can_answer": true,
+        "latency_ms": 1896.33
+      }
+    ]
+  },
+  "effect": {
+    "triggered_delta": 0,
+    "consistent_delta": 0,
+    "answered_delta": 0,
+    "blocked_delta": 0,
+    "p95_latency_delta_ms": 6.21
+  },
+  "boundary": "No gold answer scoring in this probe; it measures trigger behavior and gating, not answer accuracy."
+}

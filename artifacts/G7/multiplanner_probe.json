@@ -1,0 +1,150 @@
+{
+  "evaluation_kind": "multiplanner_high_risk_probe",
+  "model": "qwen2.5-coder-3b",
+  "cases": 8,
+  "local_model_plans": 5,
+  "dual_planning_triggered": 1,
+  "dual_planning_consistent": 0,
+  "answered": 5,
+  "blocked": 3,
+  "latency_ms": {
+    "p50": 7266.15,
+    "max": 12619.54
+  },
+  "cases_detail": [
+    {
+      "case_id": "MULTI-001",
+      "category": "forecast",
+      "question": "预测2026年土木工程招生计划和录取情况，并分析历史趋势",
+      "intent": "forecast",
+      "plan_summary": "本地模型工具规划 + 规则计划核验",
+      "tools": [
+        "admissions_overview",
+        "forecast"
+      ],
+      "triggered": true,
+      "consistent": false,
+      "similarity": 0.5,
+      "strategy": "insufficient_data",
+      "can_answer": false,
+      "answer": "数据支撑不足，为保证严谨性，暂不回答",
+      "latency_ms": 12619.54
+    },
+    {
+      "case_id": "MULTI-002",
+      "category": "forecast",
+      "question": "结合历史趋势预测2027年人工智能专业招生规模",
+      "intent": "clarify",
+      "plan_summary": "规则路由边界处理",
+      "tools": [],
+      "triggered": false,
+      "consistent": true,
+      "similarity": 1.0,
+      "strategy": "clarify",
+      "can_answer": false,
+      "answer": "请明确“招生规模”是指招生计划规模、实际录取规模，还是两者对比？",
+      "latency_ms": 0.34
+    },
+    {
+      "case_id": "MULTI-003",
+      "category": "forecast",
+      "question": "分析2026年临床医学专业计划完成风险并预测明年计划",
+      "intent": "anomaly_detection",
+      "plan_summary": "规则工具路由（单计划快速路径）",
+      "tools": [
+        "anomaly_detection"
+      ],
+      "triggered": false,
+      "consistent": true,
+      "similarity": 1.0,
+      "strategy": "answer",
+      "can_answer": true,
+      "answer": "2026 年共检测到 52 项专业异常，其中高风险 50 项、中风险 2 项。重点异常：临床医学：志愿热度为计划数的 9.83 倍，建议评估增加计划或优化专业分流；需结合政策和培养能力决策；人工智能：志愿热度为计划数的 9.47 倍，建议评估增加计划或优化专业分流；需结合政策和培养能力决策；软件工程：志愿热度为计划数的 9.35 倍，建议评估增加计划或优化专业分流；需结合政策和培养能力决策；计算机科学与技术：志愿热度为计划数的 9.32 倍，建议评估增加计划或优化专业分流；需结合政策和培养能力决策；数据科学与大数据技术：志愿热度为计划数的 8.39 倍，建议评估增加计划或优化专业分流；需结合政策和培养能力决策。",
+      "latency_ms": 1373.58
+    },
+    {
+      "case_id": "MULTI-004",
+      "category": "forecast",
+      "question": "为什么2026年计算机科学与技术专业招生计划可能需要调整",
+      "intent": "admissions_overview",
+      "plan_summary": "本地模型工具规划 + 规则计划核验",
+      "tools": [
+        "admissions_overview"
+      ],
+      "triggered": false,
+      "consistent": true,
+      "similarity": 1.0,
+      "strategy": "answer",
+      "can_answer": true,
+      "answer": "当前招生计划 149 人，实际录取 139 人，计划完成率 93.29%。 最低录取分 506.91。",
+      "latency_ms": 7423.0
+    },
+    {
+      "case_id": "MULTI-005",
+      "category": "plan_simulation",
+      "question": "如果土木工程增加20个计划，结合历史完成率和志愿热度分析风险",
+      "intent": "plan_simulation",
+      "plan_summary": "本地模型工具规划 + 规则计划核验",
+      "tools": [
+        "plan_simulation"
+      ],
+      "triggered": false,
+      "consistent": true,
+      "similarity": 1.0,
+      "strategy": "answer",
+      "can_answer": true,
+      "answer": "明确结论：不建议直接扩招。 判断对象：2026年土木工程专业，计划 104 人、录取 82 人、志愿次数 209 次，志愿热度比 2.01。 主要依据：模拟完成率降至 76.61%，扩招后缺口风险较高。 模拟结果：计划调整为 124 人，预计录取 95 人，完成率 76.61%，分数变化 -1.6 分，风险等级 high。 执行建议：不建议按当前幅度扩招；如确有政策或培养任务，建议增量暂控制在 0-3 人，并先补充生源宣传、优化专业分流和设置分阶段评估指标。 模拟后总计划为 5917 人，预计录取 5847 人，整体完成率 98.82%。土木工程计划由 104 调整为 124，预计录取 95 人，完成率 76.61%，风险等级 high。本结果为基于历史计划、录取和志愿热度的启发式模拟，不代表因果结论，最终仍需结合政策和培养能力判断。",
+      "latency_ms": 8431.92
+    },
+    {
+      "case_id": "MULTI-006",
+      "category": "plan_simulation",
+      "question": "计算机科学与技术减少10个计划会怎样，结合志愿热度评估风险",
+      "intent": "plan_simulation",
+      "plan_summary": "本地模型工具规划 + 规则计划核验",
+      "tools": [
+        "plan_simulation"
+      ],
+      "triggered": false,
+      "consistent": true,
+      "similarity": 1.0,
+      "strategy": "answer",
+      "can_answer": true,
+      "answer": "明确结论：具备扩招条件，建议分步实施。 判断对象：2026年计算机科学与技术专业，计划 149 人、录取 154 人、志愿次数 1389 次，志愿热度比 9.32。 主要依据：志愿热度比为 9.32，专业需求明显高于现有计划；下一年完成率预测为 101.23%，总体可控。 模拟结果：计划调整为 139 人，预计录取 139 人，完成率 100%，分数变化 0.8 分，风险等级 high。 执行建议：可考虑扩招 7-15 人，优先保障师资、宿舍、实验条件和就业服务，同时持续监测完成率和最低位次。 模拟后总计划为 5887 人，预计录取 5824 人，整体完成率 98.93%。计算机科学与技术计划由 149 调整为 139，预计录取 139 人，完成率 100.0%，风险等级 high。本结果为基于历史计划、录取和志愿热度的启发式模拟，不代表因果结论，最终仍需结合政策和培养能力判断。",
+      "latency_ms": 7266.15
+    },
+    {
+      "case_id": "MULTI-007",
+      "category": "trend_analysis",
+      "question": "比较2025和2026年软件工程录取趋势并解释原因",
+      "intent": "clarify",
+      "plan_summary": "规则路由边界处理",
+      "tools": [],
+      "triggered": false,
+      "consistent": true,
+      "similarity": 1.0,
+      "strategy": "clarify",
+      "can_answer": false,
+      "answer": "请提供学生姓名和招生年度；学生个体档案仅授权管理员可查。",
+      "latency_ms": 0.25
+    },
+    {
+      "case_id": "MULTI-008",
+      "category": "cross_metric",
+      "question": "综合分析2026年招生计划和生源情况，给出优化建议",
+      "intent": "source_overview",
+      "plan_summary": "本地模型工具规划 + 规则计划核验",
+      "tools": [
+        "source_overview"
+      ],
+      "triggered": false,
+      "consistent": true,
+      "similarity": 1.0,
+      "strategy": "answer",
+      "can_answer": true,
+      "answer": "当前生源 5900 人，报到 5253 人，报到率 89.03%。",
+      "latency_ms": 5878.28
+    }
+  ],
+  "boundary": "高风险探针用于验证双计划触发与一致性门控，不是准确率金标准。"
+}

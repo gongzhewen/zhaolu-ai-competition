@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-11-10T09:34:47.022Z",
+  "base": "http://127.0.0.1:3000",
+  "steps": [
+    {
+      "name": "login_and_dashboard",
+      "status": "passed",
+      "elapsed_ms": 635,
+      "detail": "登录成功并进入驾驶舱"
+    },
+    {
+      "name": "admissions_overview_loaded",
+      "status": "passed",
+      "elapsed_ms": 787,
+      "detail": "2412"
+    },
+    {
+      "name": "source_overview_loaded",
+      "status": "passed",
+      "elapsed_ms": 754,
+      "detail": "1055"
+    },
+    {
+      "name": "plan_create_modal_open_cancel",
+      "status": "passed",
+      "elapsed_ms": 1322,
+      "detail": "弹窗打开、字段校验、取消关闭"
+    },
+    {
+      "name": "major_alias_modal_open_cancel",
+      "status": "passed",
+      "elapsed_ms": 1228,
+      "detail": "弹窗打开、字段校验、取消关闭"
+    },
+    {
+      "name": "template_download",
+      "status": "passed",
+      "elapsed_ms": 436,
+      "detail": "admission_template.csv"
+    },
+    {
+      "name": "report_preview",
+      "status": "passed",
+      "elapsed_ms": 1206,
+      "detail": "预览生成并展示核心结论"
+    },
+    {
+      "name": "insights_candidate_switch",
+      "status": "passed",
+      "elapsed_ms": 2418,
+      "detail": "性别结构"
+    },
+    {
+      "name": "insights_subject_switch",
+      "status": "passed",
+      "elapsed_ms": 461,
+      "detail": "逐科成绩分析"
+    },
+    {
+      "name": "insights_major_switch",
+      "status": "passed",
+      "elapsed_ms": 1603,
+      "detail": "专业志愿热度与志愿率"
+    },
+    {
+      "name": "ai_assistant_question_answer",
+      "status": "passed",
+      "elapsed_ms": 597,
+      "detail": "当前招生计划 6295 人，实际录取 6287 人，计划完成率 99.87%。 计划规模最大的专业是土木工程，计划 302 人，完成率 99.67%。"
+    },
+    {
+      "name": "anomaly_page_loaded",
+      "status": "passed",
+      "elapsed_ms": 764,
+      "detail": "2095"
+    },
+    {
+      "name": "forecast_page_loaded",
+      "status": "passed",
+      "elapsed_ms": 751,
+      "detail": "461"
+    },
+    {
+      "name": "student_page_loaded",
+      "status": "passed",
+      "elapsed_ms": 775,
+      "detail": "2636"
+    },
+    {
+      "name": "audit_page_loaded",
+      "status": "passed",
+      "elapsed_ms": 760,
+      "detail": "1972"
+    }
+  ],
+  "pageErrors": [],
+  "apiErrors": [],
+  "passed": 15,
+  "failed": 0,
+  "status": "passed"
+}

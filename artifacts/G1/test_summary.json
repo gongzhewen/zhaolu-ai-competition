@@ -1,0 +1,89 @@
+{
+  "version": "ECSP-Admissions-G1",
+  "date": "2026-11-07",
+  "test_runner": "unittest",
+  "python_version": "3.10.11",
+  "mysql_version": "8.0.42",
+  "database_scope": "local demonstration database zhaolu_v2",
+  "external_model_calls": 0,
+  "minimind_enabled": false,
+  "full_regression": {
+    "total": 116,
+    "passed": 116,
+    "failed": 0,
+    "skipped": 0
+  },
+  "live_tool_contract": {
+    "tools": 17,
+    "passed": true
+  },
+  "live_agent_runtime_cases": {
+    "total": 5,
+    "passed": 5
+  },
+  "live_acceptance": {
+    "runs": 27,
+    "passed": 27,
+    "pass_rate": 1.0,
+    "p50_ms": 21.645,
+    "p95_ms": 866.796,
+    "p99_ms": 868.115
+  },
+  "challenge_simulation": {
+    "total": 120,
+    "strategy_matches": 120,
+    "end_to_end": false,
+    "gold_dataset": false
+  },
+  "vector_rag_live": {
+    "passed": true,
+    "model": "BAAI/bge-small-zh-v1.5"
+  },
+  "boundaries": [
+    "模拟挑战集不等于端到端准确率",
+    "未完成真实授权冻结集评测",
+    "未完成2核4G并发压测",
+    "目标云服务器正式域名与HTTPS尚未验收"
+  ],
+  "docker_acceptance": {
+    "evaluation_kind": "docker_compose_acceptance",
+    "date": "2026-11-07",
+    "project_name": "zhaolu-ai-g1-verify",
+    "host_port": 3100,
+    "docker_engine_version": "29.8.0",
+    "docker_desktop_version": "4.91.0",
+    "services": {
+      "mysql": {
+        "status": "healthy"
+      },
+      "backend": {
+        "status": "healthy"
+      },
+      "web": {
+        "status": "running",
+        "frontend_http_status": 200
+      },
+      "demo_init": {
+        "exit_code": 0,
+        "log": "mysql_demo_seed=ok"
+      }
+    },
+    "capabilities": {
+      "runtime": "agent_core_v2",
+      "tool_count": 17,
+      "rag_vector_enabled": true
+    },
+    "container_agent_smoke": {
+      "runs": 9,
+      "passed": 9,
+      "pass_rate": 1.0,
+      "p50_ms": 3.688,
+      "p95_ms": 22.264
+    },
+    "restart_recovery": {
+      "backend_healthy": true,
+      "web_healthy": true
+    },
+    "boundary": "验证使用隔离 Compose 项目和演示数据，不代表目标云服务器正式域名、HTTPS 或 2 核 4G 并发容量已完成验收。"
+  }
+}

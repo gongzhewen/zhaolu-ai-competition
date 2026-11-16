@@ -1,0 +1,59 @@
+{
+  "evaluation_kind": "route_semantics_privacy_simulation",
+  "end_to_end": false,
+  "gold_dataset": false,
+  "database_connected": false,
+  "expected_metrics_present": false,
+  "total": 120,
+  "strategy_matches": 120,
+  "strategy_match_rate": 1.0,
+  "intent_matches": 108,
+  "by_category": {
+    "单条件统计": {
+      "total": 30,
+      "strategy_matches": 30,
+      "strategy_match_rate": 1.0
+    },
+    "多条件筛选": {
+      "total": 20,
+      "strategy_matches": 20,
+      "strategy_match_rate": 1.0
+    },
+    "录取报到与流失": {
+      "total": 10,
+      "strategy_matches": 10,
+      "strategy_match_rate": 1.0
+    },
+    "成绩与分数段": {
+      "total": 10,
+      "strategy_matches": 10,
+      "strategy_match_rate": 1.0
+    },
+    "歧义与澄清": {
+      "total": 15,
+      "strategy_matches": 15,
+      "strategy_match_rate": 1.0
+    },
+    "计划完成率": {
+      "total": 15,
+      "strategy_matches": 15,
+      "strategy_match_rate": 1.0
+    },
+    "跨年趋势": {
+      "total": 10,
+      "strategy_matches": 10,
+      "strategy_match_rate": 1.0
+    },
+    "边界与隐私": {
+      "total": 10,
+      "strategy_matches": 10,
+      "strategy_match_rate": 1.0
+    }
+  },
+  "latency_ms": {
+    "p50": 0.115,
+    "p95": 0.155,
+    "p99": 0.892
+  },
+  "boundary": "本结果仅验证规则路由、槽位歧义和隐私拒答策略，不代表真实 MySQL 端到端回答准确率。"
+}

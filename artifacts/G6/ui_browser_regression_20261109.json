@@ -1,0 +1,362 @@
+{
+  "timestamp": "2026-11-09T15:22:49.304Z",
+  "routes": [
+    {
+      "viewport": "desktop",
+      "route": "/login",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/login",
+      "textLength": 31,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/dashboard",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/dashboard",
+      "textLength": 283,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/admissions/overview",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/admissions/overview",
+      "textLength": 2837,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/admissions/plans",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/admissions/plans",
+      "textLength": 1621,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/source/overview",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/source/overview",
+      "textLength": 761,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/data/import",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/import",
+      "textLength": 406,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/data/dbf",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/dbf",
+      "textLength": 410,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/data/quality",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/quality",
+      "textLength": 1201,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/data/major-aliases",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/major-aliases",
+      "textLength": 1663,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/ai/assistant",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/ai/assistant",
+      "textLength": 304,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/ai/insights",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/ai/insights",
+      "textLength": 316,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/analytics/anomalies",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/analytics/anomalies",
+      "textLength": 185,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/analytics/simulation",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/analytics/simulation",
+      "textLength": 312,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/reports",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/reports",
+      "textLength": 271,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/forecast/overview",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/forecast/overview",
+      "textLength": 486,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/system/users",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/users",
+      "textLength": 461,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/system/roles",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/roles",
+      "textLength": 565,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/system/students",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/students",
+      "textLength": 2509,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "desktop",
+      "route": "/system/audit",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/audit",
+      "textLength": 2019,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/login",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/login",
+      "textLength": 31,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/dashboard",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/dashboard",
+      "textLength": 134,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/admissions/overview",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/admissions/overview",
+      "textLength": 2688,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/admissions/plans",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/admissions/plans",
+      "textLength": 1460,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/source/overview",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/source/overview",
+      "textLength": 612,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/data/import",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/import",
+      "textLength": 261,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/data/dbf",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/dbf",
+      "textLength": 261,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/data/quality",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/quality",
+      "textLength": 1052,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/data/major-aliases",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/data/major-aliases",
+      "textLength": 1494,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/ai/assistant",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/ai/assistant",
+      "textLength": 155,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/ai/insights",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/ai/insights",
+      "textLength": 167,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/analytics/anomalies",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/analytics/anomalies",
+      "textLength": 36,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/analytics/simulation",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/analytics/simulation",
+      "textLength": 163,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/reports",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/reports",
+      "textLength": 122,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/forecast/overview",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/forecast/overview",
+      "textLength": 337,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/system/users",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/users",
+      "textLength": 312,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/system/roles",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/roles",
+      "textLength": 416,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/system/students",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/students",
+      "textLength": 2348,
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "viewport": "mobile",
+      "route": "/system/audit",
+      "status": "passed",
+      "url": "http://127.0.0.1:4173/system/audit",
+      "textLength": 1857,
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "desktop": {
+    "total": 19,
+    "passed": 19,
+    "failed": 0,
+    "pageErrors": []
+  },
+  "mobile": {
+    "total": 19,
+    "passed": 19,
+    "failed": 0,
+    "pageErrors": []
+  },
+  "passed": 38,
+  "failed": 0
+}

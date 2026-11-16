@@ -1,0 +1,149 @@
+{
+  "evaluation_kind": "feedback_learning_and_context_verification",
+  "generated_at": "2026-11-10T10:42:49+00:00",
+  "run_id": "104248",
+  "context": {
+    "original_question": "他的成绩是多少？",
+    "contextual_question": "分析2026年录取的王小明\n继续追问：他的成绩是多少？",
+    "resolution": {
+      "used": true,
+      "reason": "检测到指代或省略表达，已拼接最近一轮用户问题",
+      "previous_question": "分析2026年录取的王小明"
+    }
+  },
+  "feedback_runs": [
+    {
+      "question": "2026年招生计划数是多少？反馈验证104248A",
+      "original_answer": "当前招生计划 5897 人，实际录取 5900 人，计划完成率 100.05%。 最低录取分 466.58。 计划规模最大的专业是人工智能，计划 172 人，完成率 107.56%。",
+      "error_points": [
+        {
+          "code": "user_reported",
+          "label": "用户指出的错误",
+          "detail": "请复核年份、筛选条件和指标覆盖"
+        },
+        {
+          "code": "condition_preservation",
+          "label": "年份或筛选条件可能丢失",
+          "detail": "用户反馈涉及年份或时间条件"
+        },
+        {
+          "code": "metric_omission",
+          "label": "用户要求的指标可能未完整覆盖",
+          "detail": "用户反馈涉及指标缺失或口径差异"
+        }
+      ],
+      "second_answer": "当前招生计划 5897 人，实际录取 5900 人，计划完成率 100.05%。 最低录取分 466.58。 计划规模最大的专业是人工智能，计划 172 人，完成率 107.56%。",
+      "selection_mode": "maintained",
+      "compression": {
+        "compressed": false,
+        "active_count": 1
+      }
+    },
+    {
+      "question": "2025年招生计划数是多少？反馈验证104248B",
+      "original_answer": "当前招生计划 6000 人，实际录取 6000 人，计划完成率 100.0%。 最低录取分 467.69。 计划规模最大的专业是人工智能，计划 179 人，完成率 104.47%。",
+      "error_points": [
+        {
+          "code": "user_reported",
+          "label": "用户指出的错误",
+          "detail": "请复核数字口径和工具证据"
+        },
+        {
+          "code": "metric_omission",
+          "label": "用户要求的指标可能未完整覆盖",
+          "detail": "用户反馈涉及指标缺失或口径差异"
+        },
+        {
+          "code": "numeric_mismatch",
+          "label": "数字或口径可能不一致",
+          "detail": "用户反馈认为数字或结论不正确"
+        },
+        {
+          "code": "condition_preservation",
+          "label": "年份或筛选条件可能丢失",
+          "detail": "问题中的年份未全部出现在回答中"
+        }
+      ],
+      "second_answer": "当前招生计划 6000 人，实际录取 6000 人，计划完成率 100.0%。 最低录取分 467.69。 计划规模最大的专业是人工智能，计划 179 人，完成率 104.47%。",
+      "selection_mode": "maintained",
+      "compression": {
+        "compressed": false,
+        "active_count": 2
+      }
+    },
+    {
+      "question": "2024年各专业录取数是多少？反馈验证104248C",
+      "original_answer": "按专业统计结果：计算机科学与技术：录取数 159；金融学：录取数 126；软件工程：录取数 125；临床医学：录取数 125；人工智能：录取数 121；数据科学与大数据技术：录取数 121；电子信息工程：录取数 121；会计学：录取数 121；口腔医学技术：录取数 120；电气工程及其自动化：录取数 119。",
+      "error_points": [
+        {
+          "code": "user_reported",
+          "label": "用户指出的错误",
+          "detail": "请复核年份、筛选条件和指标覆盖"
+        },
+        {
+          "code": "condition_preservation",
+          "label": "年份或筛选条件可能丢失",
+          "detail": "用户反馈涉及年份或时间条件"
+        },
+        {
+          "code": "metric_omission",
+          "label": "用户要求的指标可能未完整覆盖",
+          "detail": "用户反馈涉及指标缺失或口径差异"
+        }
+      ],
+      "second_answer": "按专业统计结果：计算机科学与技术：录取数 159；金融学：录取数 126；软件工程：录取数 125；临床医学：录取数 125；人工智能：录取数 121；数据科学与大数据技术：录取数 121；电子信息工程：录取数 121；会计学：录取数 121；口腔医学技术：录取数 120；电气工程及其自动化：录取数 119。",
+      "selection_mode": "maintained",
+      "compression": {
+        "compressed": false,
+        "active_count": 3
+      }
+    },
+    {
+      "question": "2023年各省招生计划是多少？反馈验证104248D",
+      "original_answer": "2023年各省招生计划情况：湖南计划 643 人、录取 654 人、完成率 101.71%；广东计划 520 人、录取 502 人、完成率 96.54%；江苏计划 421 人、录取 407 人、完成率 96.67%；浙江计划 403 人、录取 420 人、完成率 104.22%；山东计划 390 人、录取 391 人、完成率 100.26%；河南计划 377 人、录取 365 人、完成率 96.82%；河北计划 340 人、录取 346 人、完成率 101.76%；四川计划 334 人、录取 341 人、完成率 102.10%；安徽计划 313 人、录取 291 人、完成率 92.97%；江西计划 290 人、录取 274 人、完成率 94.48%；福建计划 262 人、录取 278 人、完成率 106.11%；重庆计划 256 人、录取 263 人、完成率 102.73%。",
+      "error_points": [
+        {
+          "code": "user_reported",
+          "label": "用户指出的错误",
+          "detail": "请复核数字口径和工具证据"
+        },
+        {
+          "code": "metric_omission",
+          "label": "用户要求的指标可能未完整覆盖",
+          "detail": "用户反馈涉及指标缺失或口径差异"
+        },
+        {
+          "code": "numeric_mismatch",
+          "label": "数字或口径可能不一致",
+          "detail": "用户反馈认为数字或结论不正确"
+        }
+      ],
+      "second_answer": "2023年各省招生计划情况：湖南计划 643 人、录取 654 人、完成率 101.71%；广东计划 520 人、录取 502 人、完成率 96.54%；江苏计划 421 人、录取 407 人、完成率 96.67%；浙江计划 403 人、录取 420 人、完成率 104.22%；山东计划 390 人、录取 391 人、完成率 100.26%；河南计划 377 人、录取 365 人、完成率 96.82%；河北计划 340 人、录取 346 人、完成率 101.76%；四川计划 334 人、录取 341 人、完成率 102.10%；安徽计划 313 人、录取 291 人、完成率 92.97%；江西计划 290 人、录取 274 人、完成率 94.48%；福建计划 262 人、录取 278 人、完成率 106.11%；重庆计划 256 人、录取 263 人、完成率 102.73%。",
+      "selection_mode": "maintained",
+      "compression": {
+        "compressed": true,
+        "active_count": 4,
+        "summary_memory_id": 80,
+        "error_codes": [
+          "user_reported",
+          "metric_omission",
+          "condition_preservation",
+          "numeric_mismatch"
+        ],
+        "rules": [
+          "答案必须覆盖用户明确要求的全部核心指标。",
+          "复核年份、省份、专业和批次等条件是否保留。",
+          "回答数字必须与工具结果和统一口径一致。"
+        ]
+      }
+    }
+  ],
+  "checks": {
+    "context_follow_up_resolved": true,
+    "context_contains_student": true,
+    "all_feedback_reflections_completed": true,
+    "reflection_memories_compressed": true
+  },
+  "status": "passed",
+  "boundary": "否定反馈会生成反思记忆并触发二次受控工具复核；不等同于模型参数训练，也不会绕过数据证据直接改写规则。"
+}

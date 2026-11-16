@@ -1,0 +1,79 @@
+{
+  "version": "ECSP-Admissions-G1.2",
+  "date": "2026-11-08",
+  "full_regression": {
+    "total": 152,
+    "passed": 152,
+    "failed": 0,
+    "skipped": 0
+  },
+  "b2_local_text_to_sql": {
+    "status": "completed",
+    "model": "Qwen2.5-Coder-3B-Instruct Q4_K_M",
+    "overall_accuracy": 0.9339,
+    "strategy_accuracy": 0.9421,
+    "exact_metric_accuracy": 0.9304,
+    "answer_coverage": 0.8926,
+    "false_refusal_rate": 0.0609,
+    "privacy_violations": 0,
+    "p50_ms": 16337.08,
+    "p95_ms": 17583.32,
+    "p99_ms": 68974.73
+  },
+  "sql_guard": {
+    "readonly_only": true,
+    "max_rows": 200,
+    "query_timeout_seconds": 10,
+    "forbidden_write_statements": true,
+    "sensitive_columns_blocked": true,
+    "table_whitelist": true
+  },
+  "baseline_results": {
+    "g1_2": {
+      "overall_accuracy": 1.0,
+      "answer_coverage": 0.9504,
+      "unsupported_answer_rate": 0.0,
+      "privacy_violations": 0
+    },
+    "g0": {
+      "overall_accuracy": 0.9587,
+      "answer_coverage": 0.9917,
+      "unsupported_answer_rate": 0.0417,
+      "privacy_violations": 1
+    },
+    "b1": {
+      "overall_accuracy": 0.0,
+      "answer_coverage": 1.0,
+      "unsupported_answer_rate": 1.0,
+      "privacy_violations": 1
+    },
+    "b2": {
+      "status": "completed",
+      "model": "Qwen2.5-Coder-3B-Instruct Q4_K_M",
+      "overall_accuracy": 0.9339,
+      "strategy_accuracy": 0.9421,
+      "exact_metric_accuracy": 0.9304,
+      "answer_coverage": 0.8926,
+      "false_refusal_rate": 0.0609,
+      "privacy_violations": 0,
+      "p50_ms": 16337.08,
+      "p95_ms": 17583.32,
+      "p99_ms": 68974.73
+    }
+  },
+  "ablation_findings": {
+    "no_entropy": "no measurable gain on demo gold",
+    "no_evidence_gate": "no measurable gain on demo gold",
+    "no_multi_planning": "no measurable gain because local model disabled",
+    "threshold_0_37535": "same results as 0.32 on demo gold"
+  },
+  "not_run": [
+    "remove_alias_normalization",
+    "disable_privacy_hard_constraint"
+  ],
+  "boundaries": [
+    "demo database only",
+    "B2 requires local model",
+    "real authorized frozen set not available"
+  ]
+}

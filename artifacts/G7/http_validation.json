@@ -1,0 +1,58 @@
+{
+  "version": "ECSP-Admissions-G1.2",
+  "validated_at": "2026-11-08T13:53:12+08:00",
+  "base_url": "http://127.0.0.1:3000/api/v1",
+  "health": "ok",
+  "local_planner": {
+    "question": "预测2026年土木工程招生计划和录取情况，并分析历史趋势",
+    "intent": "forecast",
+    "plan_summary": "本地模型工具规划 + 规则计划核验",
+    "plan_consistency": {
+      "triggered": true,
+      "primary": "local_model_plan",
+      "secondary": "rule_tool_plan",
+      "consistent": false,
+      "score": 0.0,
+      "reasons": [
+        "两个计划的规范化结果相似度 0.0000 < 1.0000"
+      ]
+    },
+    "risk_strategy": "insufficient_data",
+    "answer_conditions": {
+      "constraints_complete": true,
+      "evidence_sufficient": true,
+      "result_consistent": false,
+      "permission_allowed": true,
+      "risk_below_threshold": true,
+      "can_answer": false
+    },
+    "answer": "数据支撑不足，为保证严谨性，暂不回答"
+  },
+  "core_questions": [
+    {
+      "question": "2025年各专业招生计划完成情况怎么样？",
+      "intent": "admissions_overview",
+      "strategy": "answer",
+      "can_answer": true,
+      "citation_count": 0,
+      "answer": "2025年各专业计划完成率：临床医学计划 546 人、录取 531 人、完成率 97.25%；会计学计划 510 人、录取 495 人、完成率 97.06%；土木工程计划 474 人、录取 459 人、完成率 96.84%；人工智能计划 438 人、录取 423 人、完成率 96.58%；软件工程计划 432 人、录取 417 人、完成率 96.53%；计算机科学与技术计划 396 人、录取 381 人、完成率 96.21%。"
+    },
+    {
+      "question": "2026年咨询渠道转化率怎么样？",
+      "intent": "consultation_overview",
+      "strategy": "answer",
+      "can_answer": true,
+      "citation_count": 0,
+      "answer": "当前共 20 条咨询，已转化 16 条，转化率 80.0%。 渠道情况：学校官网咨询 5 次、转化 4 次；招生小程序咨询 5 次、转化 4 次；电话咨询咨询 5 次、转化 4 次；线下咨询会咨询 5 次、转化 4 次。 咨询类型：电话咨询 5 次；线上咨询 5 次；现场咨询 5 次；专业咨询 5 次。"
+    },
+    {
+      "question": "新生到校比例怎么理解？",
+      "intent": "policy_faq",
+      "strategy": "answer",
+      "can_answer": true,
+      "citation_count": 1,
+      "answer": "新生到校比例怎么理解？\n“新生到校比例”通常指实际完成报到的新生人数占已录取新生人数的比例，即：报到人数 ÷ 录取人数 × 100%。它反映录取后的实际到校情况，不等同于招生计划完成率。"
+    }
+  ],
+  "boundary": "所有结果来自模拟演示数据库，不代表真实授权冻结测试集结论。"
+}

@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2016" viewBox="0 0 1120 2016">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="190" y="38" font-size="24" font-family="Microsoft YaHei, sans-serif" fill="#111827">错误类型分布（同一冻结题集，允许一题多标签）</text>
+<text x="20" y="88" font-size="16" font-weight="600" font-family="Microsoft YaHei, sans-serif" fill="#111827">完整算法</text>
+<text x="180" y="95" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">执行异常</text>
+<rect x="190" y="80" width="0.00" height="20" rx="3" fill="#b42318"/>
+<text x="197.0" y="95" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="129" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">隐私违规</text>
+<rect x="190" y="114" width="0.00" height="20" rx="3" fill="#d97706"/>
+<text x="197.0" y="129" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="163" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">边界题误答</text>
+<rect x="190" y="148" width="0.00" height="20" rx="3" fill="#7c3aed"/>
+<text x="197.0" y="163" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="197" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">应答题误拒</text>
+<rect x="190" y="182" width="0.00" height="20" rx="3" fill="#2563eb"/>
+<text x="197.0" y="197" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="231" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">策略不匹配</text>
+<rect x="190" y="216" width="0.00" height="20" rx="3" fill="#0891b2"/>
+<text x="197.0" y="231" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="265" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">指标值不匹配</text>
+<rect x="190" y="250" width="0.00" height="20" rx="3" fill="#059669"/>
+<text x="197.0" y="265" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="299" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">工具选择不匹配</text>
+<rect x="190" y="284" width="84.00" height="20" rx="3" fill="#4b5563"/>
+<text x="281.0" y="299" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="333" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">参数提取不匹配</text>
+<rect x="190" y="318" width="84.00" height="20" rx="3" fill="#be123c"/>
+<text x="281.0" y="333" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="367" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">意图不匹配</text>
+<rect x="190" y="352" width="182.00" height="20" rx="3" fill="#0369a1"/>
+<text x="379.0" y="367" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">26</text>
+<text x="20" y="410" font-size="16" font-weight="600" font-family="Microsoft YaHei, sans-serif" fill="#111827">G0</text>
+<text x="180" y="417" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">执行异常</text>
+<rect x="190" y="402" width="0.00" height="20" rx="3" fill="#b42318"/>
+<text x="197.0" y="417" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="451" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">隐私违规</text>
+<rect x="190" y="436" width="0.00" height="20" rx="3" fill="#d97706"/>
+<text x="197.0" y="451" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="485" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">边界题误答</text>
+<rect x="190" y="470" width="0.00" height="20" rx="3" fill="#7c3aed"/>
+<text x="197.0" y="485" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="519" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">应答题误拒</text>
+<rect x="190" y="504" width="0.00" height="20" rx="3" fill="#2563eb"/>
+<text x="197.0" y="519" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="553" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">策略不匹配</text>
+<rect x="190" y="538" width="70.00" height="20" rx="3" fill="#0891b2"/>
+<text x="267.0" y="553" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">10</text>
+<text x="180" y="587" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">指标值不匹配</text>
+<rect x="190" y="572" width="0.00" height="20" rx="3" fill="#059669"/>
+<text x="197.0" y="587" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="621" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">工具选择不匹配</text>
+<rect x="190" y="606" width="84.00" height="20" rx="3" fill="#4b5563"/>
+<text x="281.0" y="621" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="655" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">参数提取不匹配</text>
+<rect x="190" y="640" width="84.00" height="20" rx="3" fill="#be123c"/>
+<text x="281.0" y="655" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="689" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">意图不匹配</text>
+<rect x="190" y="674" width="182.00" height="20" rx="3" fill="#0369a1"/>
+<text x="379.0" y="689" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">26</text>
+<text x="20" y="732" font-size="16" font-weight="600" font-family="Microsoft YaHei, sans-serif" fill="#111827">B1 RAG</text>
+<text x="180" y="739" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">执行异常</text>
+<rect x="190" y="724" width="0.00" height="20" rx="3" fill="#b42318"/>
+<text x="197.0" y="739" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="773" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">隐私违规</text>
+<rect x="190" y="758" width="49.00" height="20" rx="3" fill="#d97706"/>
+<text x="246.0" y="773" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">7</text>
+<text x="180" y="807" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">边界题误答</text>
+<rect x="190" y="792" width="49.00" height="20" rx="3" fill="#7c3aed"/>
+<text x="246.0" y="807" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">7</text>
+<text x="180" y="841" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">应答题误拒</text>
+<rect x="190" y="826" width="0.00" height="20" rx="3" fill="#2563eb"/>
+<text x="197.0" y="841" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="875" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">策略不匹配</text>
+<rect x="190" y="860" width="168.00" height="20" rx="3" fill="#0891b2"/>
+<text x="365.0" y="875" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">24</text>
+<text x="180" y="909" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">指标值不匹配</text>
+<rect x="190" y="894" width="588.00" height="20" rx="3" fill="#059669"/>
+<text x="785.0" y="909" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">84</text>
+<text x="180" y="943" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">工具选择不匹配</text>
+<rect x="190" y="928" width="672.00" height="20" rx="3" fill="#4b5563"/>
+<text x="869.0" y="943" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">96</text>
+<text x="180" y="977" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">参数提取不匹配</text>
+<rect x="190" y="962" width="672.00" height="20" rx="3" fill="#be123c"/>
+<text x="869.0" y="977" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">96</text>
+<text x="180" y="1011" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">意图不匹配</text>
+<rect x="190" y="996" width="840.00" height="20" rx="3" fill="#0369a1"/>
+<text x="1037.0" y="1011" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">120</text>
+<text x="20" y="1054" font-size="16" font-weight="600" font-family="Microsoft YaHei, sans-serif" fill="#111827">B2 Text-to-SQL</text>
+<text x="180" y="1061" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">执行异常</text>
+<rect x="190" y="1046" width="133.00" height="20" rx="3" fill="#b42318"/>
+<text x="330.0" y="1061" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">19</text>
+<text x="180" y="1095" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">隐私违规</text>
+<rect x="190" y="1080" width="0.00" height="20" rx="3" fill="#d97706"/>
+<text x="197.0" y="1095" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1129" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">边界题误答</text>
+<rect x="190" y="1114" width="0.00" height="20" rx="3" fill="#7c3aed"/>
+<text x="197.0" y="1129" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1163" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">应答题误拒</text>
+<rect x="190" y="1148" width="105.00" height="20" rx="3" fill="#2563eb"/>
+<text x="302.0" y="1163" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">15</text>
+<text x="180" y="1197" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">策略不匹配</text>
+<rect x="190" y="1182" width="154.00" height="20" rx="3" fill="#0891b2"/>
+<text x="351.0" y="1197" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">22</text>
+<text x="180" y="1231" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">指标值不匹配</text>
+<rect x="190" y="1216" width="462.00" height="20" rx="3" fill="#059669"/>
+<text x="659.0" y="1231" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">66</text>
+<text x="180" y="1265" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">工具选择不匹配</text>
+<rect x="190" y="1250" width="672.00" height="20" rx="3" fill="#4b5563"/>
+<text x="869.0" y="1265" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">96</text>
+<text x="180" y="1299" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">参数提取不匹配</text>
+<rect x="190" y="1284" width="672.00" height="20" rx="3" fill="#be123c"/>
+<text x="869.0" y="1299" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">96</text>
+<text x="180" y="1333" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">意图不匹配</text>
+<rect x="190" y="1318" width="182.00" height="20" rx="3" fill="#0369a1"/>
+<text x="379.0" y="1333" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">26</text>
+<text x="20" y="1376" font-size="16" font-weight="600" font-family="Microsoft YaHei, sans-serif" fill="#111827">关闭别名归一化</text>
+<text x="180" y="1383" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">执行异常</text>
+<rect x="190" y="1368" width="0.00" height="20" rx="3" fill="#b42318"/>
+<text x="197.0" y="1383" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1417" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">隐私违规</text>
+<rect x="190" y="1402" width="0.00" height="20" rx="3" fill="#d97706"/>
+<text x="197.0" y="1417" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1451" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">边界题误答</text>
+<rect x="190" y="1436" width="0.00" height="20" rx="3" fill="#7c3aed"/>
+<text x="197.0" y="1451" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1485" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">应答题误拒</text>
+<rect x="190" y="1470" width="84.00" height="20" rx="3" fill="#2563eb"/>
+<text x="281.0" y="1485" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="1519" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">策略不匹配</text>
+<rect x="190" y="1504" width="84.00" height="20" rx="3" fill="#0891b2"/>
+<text x="281.0" y="1519" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="1553" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">指标值不匹配</text>
+<rect x="190" y="1538" width="0.00" height="20" rx="3" fill="#059669"/>
+<text x="197.0" y="1553" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1587" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">工具选择不匹配</text>
+<rect x="190" y="1572" width="84.00" height="20" rx="3" fill="#4b5563"/>
+<text x="281.0" y="1587" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="1621" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">参数提取不匹配</text>
+<rect x="190" y="1606" width="84.00" height="20" rx="3" fill="#be123c"/>
+<text x="281.0" y="1621" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="1655" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">意图不匹配</text>
+<rect x="190" y="1640" width="182.00" height="20" rx="3" fill="#0369a1"/>
+<text x="379.0" y="1655" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">26</text>
+<text x="20" y="1698" font-size="16" font-weight="600" font-family="Microsoft YaHei, sans-serif" fill="#111827">关闭隐私硬约束</text>
+<text x="180" y="1705" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">执行异常</text>
+<rect x="190" y="1690" width="0.00" height="20" rx="3" fill="#b42318"/>
+<text x="197.0" y="1705" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1739" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">隐私违规</text>
+<rect x="190" y="1724" width="49.00" height="20" rx="3" fill="#d97706"/>
+<text x="246.0" y="1739" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">7</text>
+<text x="180" y="1773" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">边界题误答</text>
+<rect x="190" y="1758" width="49.00" height="20" rx="3" fill="#7c3aed"/>
+<text x="246.0" y="1773" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">7</text>
+<text x="180" y="1807" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">应答题误拒</text>
+<rect x="190" y="1792" width="0.00" height="20" rx="3" fill="#2563eb"/>
+<text x="197.0" y="1807" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1841" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">策略不匹配</text>
+<rect x="190" y="1826" width="49.00" height="20" rx="3" fill="#0891b2"/>
+<text x="246.0" y="1841" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">7</text>
+<text x="180" y="1875" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">指标值不匹配</text>
+<rect x="190" y="1860" width="0.00" height="20" rx="3" fill="#059669"/>
+<text x="197.0" y="1875" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">0</text>
+<text x="180" y="1909" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">工具选择不匹配</text>
+<rect x="190" y="1894" width="84.00" height="20" rx="3" fill="#4b5563"/>
+<text x="281.0" y="1909" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="1943" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">参数提取不匹配</text>
+<rect x="190" y="1928" width="84.00" height="20" rx="3" fill="#be123c"/>
+<text x="281.0" y="1943" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">12</text>
+<text x="180" y="1977" text-anchor="end" font-size="13" font-family="Microsoft YaHei, sans-serif" fill="#374151">意图不匹配</text>
+<rect x="190" y="1962" width="231.00" height="20" rx="3" fill="#0369a1"/>
+<text x="428.0" y="1977" font-size="12" font-family="Microsoft YaHei, sans-serif" fill="#4b5563">33</text>
+</svg>

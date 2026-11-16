@@ -1,0 +1,77 @@
+{
+  "version": "ECSP-Admissions-G1.1",
+  "date": "2026-11-07",
+  "full_regression": {
+    "total": 126,
+    "passed": 126,
+    "failed": 0,
+    "skipped": 0
+  },
+  "demo_gold": {
+    "version": "ECSP-Admissions-G1.1",
+    "date": "2026-11-07",
+    "evaluation_kind": "demo_gold_end_to_end",
+    "real_authorized_frozen_set": false,
+    "data_scope": "local demonstration database zhaolu_v2",
+    "data_profile": {
+      "dim_major": 64,
+      "dim_province": 16,
+      "fact_plan": 5120,
+      "fact_admission_record": 28450,
+      "fact_student_identity": 28450,
+      "fact_enrollment_status": 28450
+    },
+    "cases": 121,
+    "answer_cases": 115,
+    "boundary_cases": 6,
+    "methods": {
+      "g1_full": {
+        "overall_accuracy": 1.0,
+        "strategy_accuracy": 1.0,
+        "exact_metric_accuracy": 1.0,
+        "privacy_violations": 0,
+        "p50_ms": 19.572,
+        "p95_ms": 365.111,
+        "p99_ms": 808.774
+      },
+      "g0_rule_tool": {
+        "overall_accuracy": 0.9587,
+        "strategy_accuracy": 0.9587,
+        "exact_metric_accuracy": 1.0,
+        "privacy_violations": 1,
+        "p50_ms": 18.823,
+        "p95_ms": 332.259,
+        "p99_ms": 846.428
+      },
+      "b1_local_rag_only": {
+        "overall_accuracy": 0.0,
+        "strategy_accuracy": 0.9504,
+        "exact_metric_accuracy": 0.0,
+        "privacy_violations": 1,
+        "p50_ms": 17.866,
+        "p95_ms": 18.939,
+        "p99_ms": 19.42
+      }
+    },
+    "b2_local_text_to_sql": {
+      "status": "not_run",
+      "reason": "No auditable local Text-to-SQL model service configured."
+    },
+    "g1_dual_planning_triggered": 0
+  },
+  "risk_calibration": {
+    "sample_count": 121,
+    "preferred_threshold": 0.32,
+    "selected_threshold": 0.37535,
+    "preferred_cost": 0.0,
+    "selected_cost": 0.0,
+    "decision": "keep 0.32 because no measurable gain and demo-only calibration"
+  },
+  "boundaries": [
+    "demo gold is not a real authorized frozen test set",
+    "local Text-to-SQL baseline not run",
+    "MiniMind dual planning not triggered",
+    "2-core 4GB load test not completed",
+    "target cloud domain and HTTPS not verified"
+  ]
+}

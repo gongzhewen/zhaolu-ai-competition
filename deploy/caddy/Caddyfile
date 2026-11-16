@@ -1,0 +1,13 @@
+example.com {
+    encode zstd gzip
+
+    handle /api/* {
+        reverse_proxy 127.0.0.1:8000
+    }
+
+    handle {
+        root * /opt/zhaolu-ai-v2/apps/web/dist
+        try_files {path} /index.html
+        file_server
+    }
+}

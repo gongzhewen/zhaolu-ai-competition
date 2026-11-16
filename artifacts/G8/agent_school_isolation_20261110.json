@@ -1,0 +1,30 @@
+{
+  "evaluation_kind": "agent_service_school_isolation_verification",
+  "generated_at": "2026-11-09T16:31:20+00:00",
+  "question": "2026年招生计划数是多少",
+  "school_1": {
+    "plan_count": 5897,
+    "strategy": "answer",
+    "school_context": {
+      "school_id": 1,
+      "school_code": "DEMO-UNIV-001"
+    }
+  },
+  "school_2": {
+    "plan_count": 12345,
+    "strategy": "answer",
+    "school_context": {
+      "school_id": 2,
+      "school_code": "SCHOOL-VERIFY-2"
+    }
+  },
+  "checks": {
+    "school_1_agent_response": true,
+    "school_2_agent_response": true,
+    "school_1_plan_total": true,
+    "school_2_plan_total": true,
+    "agent_data_plane_isolation": true
+  },
+  "status": "passed",
+  "boundary": "两种学校使用独立 MySQL 数据面，但共用同一控制库管理员账号；本验证不代表非管理员账号权限矩阵已完成生产审计。"
+}

@@ -1,0 +1,7 @@
+{
+  "evaluation_kind": "local_model_failover",
+  "base_url": "http://127.0.0.1:9/v1",
+  "returned_plan": null,
+  "fallback_expected": true,
+  "elapsed_ms": 598.96
+}

@@ -1,0 +1,17 @@
+{
+  "evaluation_kind": "live_mysql_agent_integration_smoke",
+  "gold_dataset": false,
+  "data_scope": "configured_local_mysql_database",
+  "external_model_calls": 0,
+  "iterations": 3,
+  "total_runs": 27,
+  "passed_runs": 27,
+  "pass_rate": 1.0,
+  "latency_ms": {
+    "p50": 40.98,
+    "p95": 907.043,
+    "p99": 940.251,
+    "max": 940.251
+  },
+  "boundary": "本结果验证本机 MySQL 上的路由、受控工具、证据门控和拒答链路；不是冻结金标准上的端到端回答准确率。"
+}

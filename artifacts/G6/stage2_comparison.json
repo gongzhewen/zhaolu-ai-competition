@@ -1,0 +1,204 @@
+{
+  "evaluation_kind": "stage2_baseline_comparison",
+  "date": "2026-11-08",
+  "data_scope": "local demonstration database zhaolu_v2",
+  "real_authorized_frozen_set": false,
+  "main_baselines": [
+    {
+      "method": "g1_full",
+      "total": 121,
+      "overall_accuracy": 1.0,
+      "answer_accuracy": 1.0,
+      "strategy_accuracy": 1.0,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 1.0,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9504,
+      "unsupported_answer_rate": 0.0,
+      "privacy_violations": 0
+    },
+    {
+      "method": "g0_rule_tool",
+      "total": 121,
+      "overall_accuracy": 0.9587,
+      "answer_accuracy": 0.9583,
+      "strategy_accuracy": 0.9587,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 0.1667,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9917,
+      "unsupported_answer_rate": 0.0417,
+      "privacy_violations": 1
+    },
+    {
+      "method": "b1_local_rag_only",
+      "total": 121,
+      "overall_accuracy": 0.0,
+      "answer_accuracy": 0.0,
+      "strategy_accuracy": 0.9504,
+      "tool_plan_accuracy": 0.0,
+      "exact_metric_accuracy": 0.0,
+      "correct_refusal_rate": 0.0,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 1.0,
+      "unsupported_answer_rate": 1.0,
+      "privacy_violations": 1
+    }
+  ],
+  "b2_local_text_to_sql": {
+    "method": "b2_local_text_to_sql",
+    "total": 121,
+    "overall_accuracy": 0.9339,
+    "strategy_accuracy": 0.9421,
+    "exact_metric_accuracy": 0.9304,
+    "correct_refusal_rate": 1.0,
+    "false_refusal_rate": 0.0609,
+    "answer_coverage": 0.8926,
+    "privacy_violations": 0,
+    "latency_ms": {
+      "p50": 16337.08,
+      "p95": 17583.32,
+      "p99": 68974.73
+    },
+    "status": "completed",
+    "model": "qwen2.5-coder-3b",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "data_profile": {
+      "dim_major": 64,
+      "dim_province": 16,
+      "fact_plan": 5120,
+      "fact_admission_record": 28450,
+      "fact_student_identity": 28450,
+      "fact_enrollment_status": 28450
+    },
+    "boundary": "本地 Text-to-SQL 强基线，不使用外部 API；结果仅针对当前演示金标准。"
+  },
+  "ablations": [
+    {
+      "total": 121,
+      "answer_accuracy": 1.0,
+      "strategy_accuracy": 1.0,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 1.0,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9504,
+      "unsupported_answer_rate": 0.0,
+      "privacy_violations": 0,
+      "overall_accuracy": 1.0,
+      "latency_ms": {
+        "p50": 18.924,
+        "p95": 303.226,
+        "p99": 715.829
+      },
+      "method": "g1_2_full",
+      "elapsed_seconds": 6.746
+    },
+    {
+      "total": 121,
+      "answer_accuracy": 1.0,
+      "strategy_accuracy": 1.0,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 1.0,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9504,
+      "unsupported_answer_rate": 0.0,
+      "privacy_violations": 0,
+      "overall_accuracy": 1.0,
+      "latency_ms": {
+        "p50": 18.426,
+        "p95": 309.198,
+        "p99": 802.602
+      },
+      "method": "no_entropy",
+      "elapsed_seconds": 7.176
+    },
+    {
+      "total": 121,
+      "answer_accuracy": 1.0,
+      "strategy_accuracy": 1.0,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 1.0,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9504,
+      "unsupported_answer_rate": 0.0,
+      "privacy_violations": 0,
+      "overall_accuracy": 1.0,
+      "latency_ms": {
+        "p50": 18.003,
+        "p95": 307.504,
+        "p99": 796.943
+      },
+      "method": "no_evidence_gate",
+      "elapsed_seconds": 7.199
+    },
+    {
+      "total": 121,
+      "answer_accuracy": 1.0,
+      "strategy_accuracy": 1.0,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 1.0,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9504,
+      "unsupported_answer_rate": 0.0,
+      "privacy_violations": 0,
+      "overall_accuracy": 1.0,
+      "latency_ms": {
+        "p50": 18.081,
+        "p95": 298.428,
+        "p99": 803.813
+      },
+      "method": "no_multi_planning",
+      "elapsed_seconds": 7.132
+    },
+    {
+      "total": 121,
+      "answer_accuracy": 1.0,
+      "strategy_accuracy": 1.0,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 1.0,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9504,
+      "unsupported_answer_rate": 0.0,
+      "privacy_violations": 0,
+      "overall_accuracy": 1.0,
+      "latency_ms": {
+        "p50": 18.316,
+        "p95": 305.271,
+        "p99": 752.658
+      },
+      "method": "threshold_0_37535",
+      "elapsed_seconds": 7.01
+    },
+    {
+      "total": 121,
+      "answer_accuracy": 0.9583,
+      "strategy_accuracy": 0.9587,
+      "tool_plan_accuracy": 1.0,
+      "exact_metric_accuracy": 1.0,
+      "correct_refusal_rate": 0.1667,
+      "false_refusal_rate": 0.0,
+      "answer_coverage": 0.9917,
+      "unsupported_answer_rate": 0.0417,
+      "privacy_violations": 1,
+      "overall_accuracy": 0.9587,
+      "latency_ms": {
+        "p50": 18.467,
+        "p95": 308.87,
+        "p99": 852.227
+      },
+      "method": "g0_rule_tool"
+    }
+  ],
+  "not_run": {
+    "remove_alias_normalization": "缺少独立的别名消融开关；不伪造结果。",
+    "disable_privacy_hard_constraint": "出于安全边界，不提供生产或评测可关闭隐私硬约束的开关；G0 规则工具作为弱隐私基线。"
+  },
+  "boundary": "所有数字来自演示库；B2 未配置本地模型时状态为 skipped。"
+}

@@ -1,0 +1,26 @@
+{
+  "total": 121,
+  "answer_accuracy": 1.0,
+  "strategy_accuracy": 1.0,
+  "tool_plan_accuracy": 1.0,
+  "exact_metric_accuracy": 1.0,
+  "correct_refusal_rate": 1.0,
+  "false_refusal_rate": 0.0,
+  "answer_coverage": 0.9504,
+  "unsupported_answer_rate": 0.0,
+  "privacy_violations": 0,
+  "overall_accuracy": 1.0,
+  "latency_ms": {
+    "p50": 97.902,
+    "p95": 11549.098,
+    "p99": 12369.473
+  },
+  "method": "g1_2_local_planner",
+  "status": "completed",
+  "model": "qwen2.5-coder-3b",
+  "model_enabled": true,
+  "dual_planning_triggered": 0,
+  "dual_planning_consistent": 0,
+  "local_model_plans": 59,
+  "boundary": "本地 3B 规划器，演示数据库；不是真实授权冻结集实验。"
+}

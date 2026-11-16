@@ -1,0 +1,30 @@
+{
+  "evaluation_kind": "real_frozen_v2_end_to_end",
+  "dataset_version": "m1-real-frozen-v2",
+  "data_snapshot_id": "22e448a8eaad9896592b310e355b01a0d375e50241cb71bd66339dfb3133d298",
+  "case_set_sha256": "8ae82893af13eac2fca6181a3363b172539712edec0db773b11dd86eebe54196",
+  "data_scope": "local authorized real-source anonymized snapshot; 2024-2025 frozen test only",
+  "authorization_status": "declared_by_user_pending_signed_document",
+  "post_hoc_freeze": true,
+  "cases": 120,
+  "methods": [
+    "g0_rule_tool",
+    "g1_full",
+    "b1_local_rag_only"
+  ],
+  "external_api_calls": 0,
+  "local_sql_model": {
+    "enabled": false,
+    "base_url": "",
+    "model": ""
+  },
+  "agent_config": {
+    "agent_fast_mode": true,
+    "agent_risk_threshold": 0.32,
+    "agent_privacy_min_cohort_size": 5,
+    "agent_multi_planning_enabled": false,
+    "agent_plan_consistency_threshold": 1.0,
+    "agent_min_data_support": 0.65
+  },
+  "generated_at": "2026-11-09T16:44:28+00:00"
+}

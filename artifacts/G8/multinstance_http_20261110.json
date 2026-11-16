@@ -1,0 +1,49 @@
+{
+  "evaluation_kind": "two_instance_http_redis_verification",
+  "generated_at": "2026-11-09T16:25:07+00:00",
+  "instances": [
+    {
+      "base_url": "http://127.0.0.1:8011",
+      "instance_id": "verify-instance-1",
+      "redis": {
+        "enabled": true,
+        "available": true,
+        "latency_ms": 1.3
+      },
+      "latency_ms": 177.8,
+      "tool_cache_hits": [
+        false
+      ],
+      "strategy": "answer"
+    },
+    {
+      "base_url": "http://127.0.0.1:8012",
+      "instance_id": "verify-instance-2",
+      "redis": {
+        "enabled": true,
+        "available": true,
+        "latency_ms": 1.02
+      },
+      "latency_ms": 86.96,
+      "tool_cache_hits": [
+        true
+      ],
+      "strategy": "answer"
+    }
+  ],
+  "checks": {
+    "two_instances_healthy": true,
+    "redis_available_on_both_instances": true,
+    "cross_instance_l2_cache_hit": true,
+    "shared_metrics_aggregate": true
+  },
+  "metrics": {
+    "source_1": "redis",
+    "source_2": "redis",
+    "chat_total_1": 2,
+    "chat_total_2": 2,
+    "cache_l2": 1
+  },
+  "status": "passed",
+  "boundary": "两个独立 Uvicorn 进程共用同一 MySQL 与 Redis，验证应用层共享缓存和指标聚合；不代表生产 Redis 集群或跨主机网络故障验证。"
+}

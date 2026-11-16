@@ -1,0 +1,48 @@
+{
+  "evaluation_kind": "http_runtime_metrics_probe",
+  "base_url": "http://127.0.0.1:3000",
+  "question": "2026年各专业招生计划完成情况怎么样？性能探针20261107145420710958",
+  "chat_runs": 2,
+  "cache_l1_delta": 1,
+  "cache_miss_delta": 1,
+  "expected_cache_miss_then_hit": true,
+  "first_strategy": "answer",
+  "second_strategy": "answer",
+  "first_tool_cache_hits": [
+    false
+  ],
+  "second_tool_cache_hits": [
+    true
+  ],
+  "metrics_after": {
+    "source": "memory",
+    "sample_count": 2,
+    "latency_ms": {
+      "p50": 4.7,
+      "p95": 51.6,
+      "p99": 51.6,
+      "max": 51.6
+    },
+    "counters": {
+      "chat_total": 2,
+      "route_fast": 2,
+      "tool_total": 2,
+      "plan_total": 2,
+      "strategy_answer": 2,
+      "cache_miss": 1,
+      "cache_l1": 1
+    },
+    "rates": {
+      "fast_route_rate": 1.0,
+      "cache_hit_rate": 0.5,
+      "cache_l2_rate": 0.0,
+      "dual_planning_trigger_rate": 0.0,
+      "llm_timeout_rate": 0.0,
+      "llm_rejection_rate": 0.0,
+      "answer_rate": 1.0,
+      "clarification_rate": 0.0,
+      "refusal_rate": 0.0
+    }
+  },
+  "boundary": "单实例、无 Redis、演示数据下的 HTTP 缓存与运行时指标探针，不代表并发容量。"
+}
