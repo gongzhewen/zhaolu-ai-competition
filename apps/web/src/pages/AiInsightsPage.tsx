@@ -1,6 +1,7 @@
 import { Alert, App, Button, Card, Col, Row, Select, Space, Spin, Statistic, Table, Tabs, Tag } from "antd";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { LazyEChartsContainer } from "@/components/charts/lazy-echarts-container";
 import { PageHero } from "@/components/layout/page-hero";
 import { apiFetch } from "@/lib/api/client";
@@ -333,6 +334,78 @@ export default function AiInsightsPage() {
     [data, selectedYear],
   );
 
+  const exportTable = useMemo(() => {
+    if (!selectedSummary) {
+      return null;
+    }
+    const detail = selectedSummary.detail;
+    if (scope === "candidate" && detail?.candidate) {
+      return {
+        columns: ["维度", "人数"],
+        rows: [
+          ...(detail.candidate.by_gender ?? []).map((item) => ["性别·" + item.name, item.count]),
+          ...(detail.candidate.by_subject ?? []).map((item) => ["科类·" + item.name, item.count]),
+          ...(detail.candidate.by_exam_type ?? []).map((item) => ["考试类型·" + item.name, item.count]),
+          ...(detail.candidate.by_region ?? []).map((item) => ["地区·" + item.name, item.count]),
+        ],
+      };
+    }
+    if (scope === "subject" && detail?.subjects?.subjects) {
+      return {
+        columns: ["科目", "参考人数", "平均分", "最低分", "最高分", "标准差"],
+        rows: detail.subjects.subjects.map((item) => [
+          item.subject_name,
+          item.candidate_count,
+          item.avg_score ?? null,
+          item.min_score ?? null,
+          item.max_score ?? null,
+          item.score_stddev ?? null,
+        ]),
+      };
+    }
+    if (scope === "major" && detail?.major_detail) {
+      return {
+        columns: ["专业", "招生计划", "志愿次数", "志愿人数", "志愿/计划", "完成率"],
+        rows: detail.major_detail.map((item) => [
+          item.major_name,
+          item.plan_count,
+          item.choice_count,
+          item.candidate_count,
+          item.choice_per_plan ?? null,
+          item.completion_rate ?? null,
+        ]),
+      };
+    }
+    if (scope === "medical" && detail?.medical?.medical_results) {
+      return {
+        columns: ["体检结论", "人数"],
+        rows: detail.medical.medical_results.map((item) => [item.result_name, item.count]),
+      };
+    }
+    return {
+      columns: ["指标", "数值"],
+      rows: Object.entries(selectedSummary.metrics)
+        .filter(([key]) => !["coverage_basis", "data_quality_status"].includes(key))
+        .map(([key, value]) => [key, value === null ? "" : String(value)]),
+    };
+  }, [scope, selectedSummary]);
+
+  const exportSections = useMemo(() => {
+    if (!selectedSummary) {
+      return [];
+    }
+    return [
+      ...selectedSummary.insights.map((item) => ({
+        title: item.title,
+        text: [item.finding, item.analysis, `建议：${item.suggestion}`].filter(Boolean).join("\n"),
+      })),
+      ...(data?.cross_year_insights ?? []).map((item) => ({
+        title: `跨年度·${item.title}`,
+        text: [item.finding, item.analysis, `建议：${item.suggestion}`].filter(Boolean).join("\n"),
+      })),
+    ];
+  }, [data, selectedSummary]);
+
   const volumeTrendOption = useMemo(() => ({
     tooltip: { trigger: "axis" as const },
     legend: { data: ["招生计划", "实际录取", "生源明细", "已报到"] },
@@ -373,6 +446,16 @@ export default function AiInsightsPage() {
           <Space>
             <Select value={scope} onChange={setScope} options={scopeOptions} style={{ width: 180 }} />
             <Button type="primary" onClick={handleGenerate} loading={loading}>生成深度洞察</Button>
+            <ResultExportMenu
+              kind="insights"
+              title={`${selectedYear ?? "当前"}年${scopeOptions.find((item) => item.value === scope)?.label ?? "综合洞察"}分析`}
+              filename={`AI数据洞察_${selectedYear ?? "当前"}_${scope}`}
+              metrics={selectedSummary?.metrics}
+              table={exportTable}
+              sections={exportSections}
+              metadata={{ scope, selected_year: selectedYear, years: data?.years }}
+              disabled={!data || loading}
+            />
           </Space>
         }
       />

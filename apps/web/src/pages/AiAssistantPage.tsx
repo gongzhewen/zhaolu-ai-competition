@@ -2,6 +2,7 @@ import { DislikeOutlined, LikeOutlined } from "@ant-design/icons";
 import { App, Button, Collapse, Empty, Input, Space, Spin, Table, Tag } from "antd";
 import { useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import type { ChartOption } from "@/components/charts/echarts-container";
 import { LazyEChartsContainer } from "@/components/charts/lazy-echarts-container";
 import { PageHero } from "@/components/layout/page-hero";
@@ -333,6 +334,36 @@ export default function AiAssistantPage() {
                 {item.response.plan_summary ? (
                   <Tag color="purple">AI 处理：{item.response.plan_summary}</Tag>
                 ) : null}
+                <ResultExportMenu
+                  kind="query"
+                  title={`AI问数结果：${item.question ?? item.response.intent}`}
+                  filename={`AI问数结果_${item.response.message_id}`}
+                  question={item.question}
+                  answer={item.content}
+                  table={item.response.table}
+                  metrics={{
+                    intent: item.response.intent,
+                    confidence: item.response.confidence,
+                    need_human: item.response.need_human,
+                    self_check_score: item.response.self_check?.score,
+                  }}
+                  sections={[
+                    {
+                      title: "智能体自查",
+                      text: JSON.stringify(item.response.self_check ?? {}, null, 2),
+                    },
+                    {
+                      title: "工具调用",
+                      text: JSON.stringify(item.response.tool_calls ?? [], null, 2),
+                    },
+                  ]}
+                  metadata={{
+                    message_id: item.response.message_id,
+                    conversation_id: item.response.conversation_id,
+                    intent: item.response.intent,
+                    sources: item.response.data_sources,
+                  }}
+                />
                 <Button
                   size="small"
                   icon={<LikeOutlined />}

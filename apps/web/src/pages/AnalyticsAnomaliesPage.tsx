@@ -3,6 +3,7 @@ import type { TableColumnsType } from "antd";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { LazyEChartsContainer } from "@/components/charts/lazy-echarts-container";
 import { PageHero } from "@/components/layout/page-hero";
 import { apiFetch } from "@/lib/api/client";
@@ -175,6 +176,56 @@ export default function AnomaliesPage() {
             >
               重新检测
             </Button>
+            <ResultExportMenu
+              kind="anomaly"
+              title={`${data.year_no}年招生异常检测`}
+              filename={`招生异常检测_${data.year_no}`}
+              metrics={{
+                total_anomalies: data.summary.total_anomalies,
+                high: data.summary.high,
+                medium: data.summary.medium,
+                filtered_count: items.length,
+              }}
+              table={{
+                columns: [
+                  "专业",
+                  "风险等级",
+                  "异常原因",
+                  "计划数",
+                  "录取数",
+                  "完成率",
+                  "志愿热度比",
+                  "计划同比",
+                  "录取同比",
+                  "建议",
+                ],
+                rows: items.map((item) => [
+                  item.major_name,
+                  item.severity,
+                  item.message,
+                  item.plan_count,
+                  item.admitted_count,
+                  item.completion_rate,
+                  item.demand_ratio,
+                  item.plan_change_pct,
+                  item.admitted_change_pct,
+                  item.suggestion,
+                ]),
+              }}
+              sections={[
+                {
+                  title: "检测口径",
+                  text: `检测年度 ${data.year_no}，同比基线 ${data.previous_year}，当前筛选 ${severity}。`,
+                },
+              ]}
+              metadata={{
+                year: data.year_no,
+                previous_year: data.previous_year,
+                severity,
+                contains_synthetic: data.contains_synthetic,
+                sources: data.data_sources,
+              }}
+            />
           </Space>
         }
       />

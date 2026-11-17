@@ -2,6 +2,7 @@ import { Select, Space, Spin, Table, Tag } from "antd";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { apiFetch } from "@/lib/api/client";
 import { PageHero } from "@/components/layout/page-hero";
 
@@ -56,6 +57,29 @@ export default function AuditPage() {
       <PageHero
         title="审计日志"
         description="查看登录、数据操作、AI 调用与系统管理记录，让关键动作始终可回溯。"
+        actions={
+          <ResultExportMenu
+            kind="audit"
+            title="系统审计日志"
+            filename="系统审计日志"
+            metrics={summary?.metrics}
+            table={{
+              columns: ["编号", "用户ID", "操作", "资源类型", "资源编号", "结果", "IP", "时间", "请求数据"],
+              rows: logs.map((log) => [
+                log.id,
+                log.user_id,
+                log.action_type,
+                log.resource_type,
+                log.resource_id,
+                log.result_status,
+                log.ip_address,
+                log.created_at,
+                JSON.stringify(log.request_data ?? {}),
+              ]),
+            }}
+            metadata={{ action_type: actionType ?? "all" }}
+          />
+        }
       />
 
       <section className="metric-grid">

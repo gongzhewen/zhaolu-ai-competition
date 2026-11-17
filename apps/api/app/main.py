@@ -15,6 +15,7 @@ from app.modules.analytics.router import router as analytics_router
 from app.modules.audit.router import router as audit_router
 from app.modules.auth.router import router as auth_router
 from app.modules.canonicalization.router import router as canonicalization_router
+from app.modules.exports.router import router as exports_router
 from app.modules.forecast.router import router as forecast_router
 from app.modules.ingestion.dbf_router import router as dbf_router
 from app.modules.ingestion.router import router as ingestion_router
@@ -71,6 +72,7 @@ app.include_router(quality_router, prefix="/api/v1/data/quality", tags=["quality
 app.include_router(ingestion_router, prefix="/api/v1/data", tags=["data"])
 app.include_router(dbf_router, prefix="/api/v1/data", tags=["dbf-import"])
 app.include_router(canonicalization_router, prefix="/api/v1/canonicalization", tags=["canonicalization"])
+app.include_router(exports_router, prefix="/api/v1/exports", tags=["exports"])
 
 
 @app.get("/api/v1")

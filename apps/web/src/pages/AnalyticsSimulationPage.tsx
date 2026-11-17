@@ -3,6 +3,7 @@ import type { TableColumnsType } from "antd";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { LazyEChartsContainer } from "@/components/charts/lazy-echarts-container";
 import { PageHero } from "@/components/layout/page-hero";
 import { apiFetch } from "@/lib/api/client";
@@ -198,6 +199,72 @@ export default function PlanSimulationPage() {
       <PageHero
         title="招生计划策略沙盘"
         description="在不修改真实计划的前提下，提前观察专业计划调整对录取、完成率和风险的影响。"
+        actions={
+          <ResultExportMenu
+            kind="simulation"
+            title={`${result?.year_no ?? selectedYear ?? "当前"}年招生计划模拟`}
+            filename={`计划模拟_${result?.year_no ?? selectedYear ?? "当前"}`}
+            disabled={!result}
+            metrics={{
+              baseline_plan: result?.baseline.plan_count,
+              baseline_admitted: result?.baseline.admitted_count,
+              baseline_completion_rate: result?.baseline.completion_rate,
+              projected_plan: result?.projected.plan_count,
+              projected_admitted: result?.projected.admitted_count,
+              projected_completion_rate: result?.projected.completion_rate,
+            }}
+            table={
+              result
+                ? {
+                    columns: [
+                      "专业",
+                      "计划变化",
+                      "基准计划",
+                      "模拟计划",
+                      "基准录取",
+                      "模拟录取",
+                      "模拟完成率",
+                      "估计分数变化",
+                      "风险等级",
+                    ],
+                    rows: result.results.map((item) => [
+                      item.major_name,
+                      item.plan_delta,
+                      item.baseline_plan,
+                      item.projected_plan,
+                      item.baseline_admitted,
+                      item.projected_admitted,
+                      item.projected_completion_rate,
+                      item.projected_score_change,
+                      item.risk_level,
+                    ]),
+                  }
+                : null
+            }
+            sections={
+              result
+                ? [
+                    {
+                      title: "模型说明",
+                      text: result.disclaimer,
+                    },
+                    ...(result.unmatched_adjustments.length
+                      ? [
+                          {
+                            title: "未匹配专业",
+                            text: result.unmatched_adjustments.join("、"),
+                          },
+                        ]
+                      : []),
+                  ]
+                : []
+            }
+            metadata={{
+              year: result?.year_no,
+              contains_synthetic: result?.contains_synthetic,
+            }}
+          />
+        }
       />
 
       <Card className="report-form" title="设置模拟场景" extra={<Tag color="blue">What-if 分析</Tag>}>

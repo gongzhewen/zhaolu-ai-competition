@@ -2,6 +2,7 @@ import { Alert, Button, Space, Spin, Tag } from "antd";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { LazyEChartsContainer } from "@/components/charts/lazy-echarts-container";
 import { PageHero } from "@/components/layout/page-hero";
 import { apiFetch } from "@/lib/api/client";
@@ -135,6 +136,47 @@ export default function ForecastOverviewPage() {
             >
               重新计算
             </Button>
+            <ResultExportMenu
+              kind="forecast"
+              title={`${data.forecast.year}年招生预测与预警`}
+              filename={`招生预测_${data.forecast.year}`}
+              metrics={{
+                predicted_year: data.forecast.year,
+                plan_count: data.forecast.plan_count,
+                admitted_count: data.forecast.admitted_count,
+                completion_rate: data.forecast.completion_rate,
+                risk_level: data.forecast.risk_level,
+                confidence: data.forecast.confidence,
+                data_points: data.forecast.data_points,
+              }}
+              table={{
+                columns: ["年度", "计划数", "录取数", "完成率", "类型"],
+                rows: [
+                  ...data.history.map((item) => [
+                    item.year_no,
+                    item.plan_count,
+                    item.admitted_count,
+                    item.completion_rate,
+                    "历史",
+                  ]),
+                  [
+                    data.forecast.year,
+                    data.forecast.plan_count,
+                    data.forecast.admitted_count,
+                    data.forecast.completion_rate,
+                    "预测",
+                  ],
+                ],
+              }}
+              sections={data.alerts.map((alert) => ({
+                title: alert.title,
+                text: `${alert.description}\n指标：${alert.metric}`,
+              }))}
+              metadata={{
+                model: data.forecast.model,
+                data_sources: data.data_sources,
+              }}
+            />
           </Space>
         }
       />

@@ -2,6 +2,7 @@ import { Alert, Select, Space, Spin, Table, Tag } from "antd";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { LazyEChartsContainer } from "@/components/charts/lazy-echarts-container";
 import { PageHero } from "@/components/layout/page-hero";
 import { apiFetch } from "@/lib/api/client";
@@ -101,6 +102,38 @@ export default function SourceOverviewPage() {
             />
             <Tag color="blue">当前年度：{data?.year_no ?? "最新"}</Tag>
             {year && year <= 2025 ? <Tag color="orange">历史年度</Tag> : null}
+            {data ? (
+              <ResultExportMenu
+                kind="insights"
+                title={`${data.year_no}年生源分析`}
+                filename={`生源分析_${data.year_no}`}
+                metrics={data.metrics}
+                table={{
+                  columns: ["渠道", "生源人数", "报到人数", "平均分"],
+                  rows: data.by_channel.map((item) => [
+                    item.channel_name,
+                    item.candidate_count,
+                    item.enrolled_count,
+                    item.avg_score,
+                  ]),
+                }}
+                sections={[
+                  {
+                    title: "省份生源分布",
+                    text: data.by_province
+                      .map(
+                        (item) =>
+                          `${item.province_name}：生源 ${item.candidate_count}，报到 ${item.enrolled_count}，平均分 ${item.avg_score ?? "暂无"}`,
+                      )
+                      .join("\n"),
+                  },
+                ]}
+                metadata={{
+                  year: data.year_no,
+                  coverage_basis: data.metrics.coverage_basis,
+                }}
+              />
+            ) : null}
           </Space>
         }
       />

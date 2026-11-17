@@ -2,6 +2,7 @@ import { App, Button, Space, Spin, Table, Tag } from "antd";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { apiFetch } from "@/lib/api/client";
 import { PageHero } from "@/components/layout/page-hero";
 
@@ -93,9 +94,43 @@ export default function DataQualityPage() {
         title="数据质量"
         description="持续扫描缺失、重复与异常记录，让进入分析链路的数据保持可信。"
         actions={
-          <Button type="primary" onClick={handleScan} loading={loading}>
-            运行质量扫描
-          </Button>
+          <Space>
+            <Button type="primary" onClick={handleScan} loading={loading}>
+              运行质量扫描
+            </Button>
+            <ResultExportMenu
+              kind="quality"
+              title="数据质量问题清单"
+              filename="数据质量问题"
+              metrics={summary?.metrics}
+              table={{
+                columns: ["编号", "目标表", "记录键", "类型", "问题说明", "状态", "创建时间"],
+                rows: issues.map((issue) => [
+                  issue.id,
+                  issue.target_table,
+                  issue.record_key,
+                  issue.issue_type,
+                  issue.issue_message,
+                  issue.issue_status,
+                  issue.created_at,
+                ]),
+              }}
+              sections={[
+                {
+                  title: "问题类型分布",
+                  text: (summary?.by_type ?? [])
+                    .map((item) => `${item.issue_type}：${item.issue_count}`)
+                    .join("\n"),
+                },
+                {
+                  title: "目标表分布",
+                  text: (summary?.by_table ?? [])
+                    .map((item) => `${item.target_table}：${item.issue_count}`)
+                    .join("\n"),
+                },
+              ]}
+            />
+          </Space>
         }
       />
 

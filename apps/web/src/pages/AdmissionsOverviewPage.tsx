@@ -2,6 +2,7 @@ import { Alert, Select, Space, Spin, Table, Tag } from "antd";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 
+import { ResultExportMenu } from "@/components/actions/result-export-menu";
 import { LazyEChartsContainer } from "@/components/charts/lazy-echarts-container";
 import { PageHero } from "@/components/layout/page-hero";
 import { apiFetch } from "@/lib/api/client";
@@ -194,6 +195,47 @@ export default function AdmissionsOverviewPage() {
             />
             {year ? <Tag color="blue">官方汇总</Tag> : null}
             {data?.metrics.score_scope ? <Tag color="default">普通类文化总分</Tag> : null}
+            {data ? (
+              <ResultExportMenu
+                kind="insights"
+                title={`${year ?? "当前"}年招生驾驶舱分析`}
+                filename={`招生驾驶舱_${year ?? "当前"}`}
+                metrics={data.metrics}
+                table={{
+                  columns: ["专业", "计划数", "录取数", "完成率", "最低分", "最高分", "最低位次"],
+                  rows: data.by_major.map((item) => [
+                    item.major_name,
+                    item.plan_count,
+                    item.admitted_count,
+                    item.completion_rate,
+                    item.min_score,
+                    item.max_score,
+                    item.min_rank_no,
+                  ]),
+                }}
+                sections={[
+                  {
+                    title: "分省招生",
+                    text: data.by_province
+                      .map(
+                        (item) =>
+                          `${item.province_name}：计划 ${item.plan_count}，录取 ${item.admitted_count}，完成率 ${item.completion_rate}%，最低分 ${item.min_score ?? "暂无"}`,
+                      )
+                      .join("\n"),
+                  },
+                  {
+                    title: "年度趋势",
+                    text: data.year_trend
+                      .map(
+                        (item) =>
+                          `${item.year_no}：计划 ${item.plan_count}，录取 ${item.admitted_count}，完成率 ${item.completion_rate}%`,
+                      )
+                      .join("\n"),
+                  },
+                ]}
+                metadata={{ year: year ?? null, province: province ?? "全部" }}
+              />
+            ) : null}
           </Space>
         }
       />
