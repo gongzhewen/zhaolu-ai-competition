@@ -1,0 +1,116 @@
+{
+  "requests": 120,
+  "successful_requests": 120,
+  "error_requests": 0,
+  "success_rate": 1.0,
+  "throughput_rps": 55.252,
+  "elapsed_seconds": 2.172,
+  "latency_ms": {
+    "p50": 361.79,
+    "p95": 732.24,
+    "p99": 888.35,
+    "max": 1098.45
+  },
+  "http_status_counts": {
+    "200": 120
+  },
+  "strategy_counts": {
+    "answer": 94,
+    "out_of_scope": 13,
+    "no_permission": 13
+  },
+  "by_scenario": {
+    "anomaly_scan": {
+      "requests": 27,
+      "success": 27,
+      "success_rate": 1.0,
+      "avg_ms": 615.36,
+      "p95_ms": 888.35,
+      "max_ms": 1098.45
+    },
+    "cached_plan": {
+      "requests": 27,
+      "success": 27,
+      "success_rate": 1.0,
+      "avg_ms": 369.76,
+      "p95_ms": 503.49,
+      "max_ms": 510.59
+    },
+    "out_of_scope": {
+      "requests": 13,
+      "success": 13,
+      "success_rate": 1.0,
+      "avg_ms": 221.53,
+      "p95_ms": 402.1,
+      "max_ms": 402.1
+    },
+    "privacy_refusal": {
+      "requests": 13,
+      "success": 13,
+      "success_rate": 1.0,
+      "avg_ms": 230.75,
+      "p95_ms": 346.23,
+      "max_ms": 346.23
+    },
+    "simple_plan": {
+      "requests": 40,
+      "success": 40,
+      "success_rate": 1.0,
+      "avg_ms": 400.08,
+      "p95_ms": 553.14,
+      "max_ms": 714.04
+    }
+  },
+  "evaluation_kind": "concurrency_load_test",
+  "timestamp": "2026-11-17T09:37:15.589659+00:00",
+  "base_url": "http://127.0.0.1:3000",
+  "concurrency": 24,
+  "cpu_profile": "local demo, 24-way concurrency, rules fast path",
+  "metrics_delta": {
+    "chat_total": 120,
+    "cache_l1": 46,
+    "cache_l2": 0,
+    "cache_miss": 48,
+    "plan_dual_triggered": 0,
+    "llm_timeout": 0
+  },
+  "metrics_after": {
+    "source": "memory",
+    "sample_count": 190,
+    "formal_constraints": {
+      "unsupported_answer_alpha": 0.0,
+      "p95_latency_budget_ms": 2000.0,
+      "p95_within_budget": true
+    },
+    "latency_ms": {
+      "p50": 98.62,
+      "p95": 538.71,
+      "p99": 666.38,
+      "max": 935.73
+    },
+    "counters": {
+      "chat_total": 190,
+      "route_fast": 190,
+      "tool_total": 146,
+      "plan_total": 190,
+      "strategy_answer": 146,
+      "cache_miss": 84,
+      "strategy_out_of_scope": 22,
+      "strategy_no_permission": 22,
+      "cache_l1": 62
+    },
+    "rates": {
+      "fast_route_rate": 1.0,
+      "cache_hit_rate": 0.4247,
+      "cache_l2_rate": 0.0,
+      "dual_planning_trigger_rate": 0.0,
+      "llm_timeout_rate": 0.0,
+      "llm_rejection_rate": 0.0,
+      "model_versions": {},
+      "answer_rate": 0.7684,
+      "clarification_rate": 0.0,
+      "refusal_rate": 0.2316
+    }
+  },
+  "boundary": "Docker CPU/memory quotas approximate a 2-core 4G deployment; host hardware and network may differ from the final cloud server."
+}

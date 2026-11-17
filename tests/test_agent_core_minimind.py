@@ -1,6 +1,11 @@
 import unittest
 
-from agent_core.minimind import MiniMindConfig, MiniMindRouter, build_minimind_planner_prompt, parse_minimind_plan
+from agent_core.minimind import (
+    MiniMindConfig,
+    MiniMindRouter,
+    build_minimind_planner_prompt,
+    parse_minimind_plan,
+)
 from agent_core.planner import should_use_llm_plan
 
 
@@ -62,6 +67,26 @@ class MiniMindTests(unittest.TestCase):
             should_use_llm_plan(
                 "普通预测问题",
                 "forecast",
+                fast_mode=True,
+                llm_configured=True,
+            )
+        )
+
+    def test_simple_overview_skips_local_planner_in_fast_mode(self):
+        self.assertFalse(
+            should_use_llm_plan(
+                "2026年各专业招生计划完成情况怎么样？",
+                "admissions_overview",
+                fast_mode=True,
+                llm_configured=True,
+            )
+        )
+
+    def test_explicit_analysis_still_uses_local_planner(self):
+        self.assertTrue(
+            should_use_llm_plan(
+                "综合分析2026年招生计划完成情况和风险原因",
+                "admissions_overview",
                 fast_mode=True,
                 llm_configured=True,
             )
